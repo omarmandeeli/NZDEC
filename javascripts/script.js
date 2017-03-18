@@ -65,3 +65,7 @@ $(function () {
         }
     })
 });
+
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
