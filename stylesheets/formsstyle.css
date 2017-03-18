@@ -153,13 +153,7 @@ body {
 
 /* line 151, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 header {
-  background: black;
-  color: white;
-  min-height: 0%;
-  text-align: center;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+
   }
   /* line 164, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header.fixed-top .site-main-menu {
@@ -167,14 +161,8 @@ header {
     box-shadow: 0 -2px 0 0 #2e8ece inset; }
   /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .parallax {
-    background: url("../images/123.jpg") no-repeat fixed 0 0/100% rgba(0, 0, 0, 0);
-    height: 1200px;
-    left: 0;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    opacity: 0.55; }
+    
+  }
   /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .site-logo {
     position: relative;
@@ -642,7 +630,7 @@ footer {
     display: inline-block;
     font-size: 0.8em;
     margin-right: 4px;
-    margin-top: 40px;
+    margin-top: 100px;
     line-height: 30px;
 
     text-align: center;

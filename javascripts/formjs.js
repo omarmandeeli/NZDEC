@@ -20,12 +20,6 @@ $('.parallax').parallax({
   speed : 0.6
 });
 
-$(window).resize(function(){
-  var windowHeight = $(window).height();
-  $('#header').css({
-    'height':windowHeight
-  });
-}).resize();
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -69,3 +63,9 @@ $(function () {
 $( function() {
     $( "#datepicker" ).datepicker();
   } );
+
+$(document).ready(function(){
+    $('#foo_form input:checkbox').change(function(){
+       $('#bar_' + this.id.replace('foo_', '')).prop('checked', this.checked); 
+    });
+});
