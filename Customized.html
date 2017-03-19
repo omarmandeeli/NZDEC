@@ -18,7 +18,7 @@
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
   
-    <link href="stylesheets/formsstyle.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/customizedcss.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
     
   </head>
@@ -42,7 +42,7 @@
               <a href='index.html'>CONTACT</a>
             </li>
             <li>
-              <a href='index.html'>INQUIRE</a>
+              <a href='inquire.html'>INQUIRE</a>
             </li>
           </ul>
           <span class='follow'>
@@ -62,55 +62,53 @@
       </header>
 
 
-<div class="form-style-5">
-<form>
-<fieldset>
-<legend><span class="number1">1</span> Client Information</legend>
-<input type="text" name="field1" placeholder="Your Name *">
-<input type="text" name="field1" placeholder="Your Address *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="email" name="field2" placeholder="Your Email *">
 
+<dd>
+<div class="container1">  
 
-<textarea name="field3" placeholder="More Details"></textarea>
-<legend><span class="number">2</span> Event Details </legend>
-<label for="job">Event</label>
-<select id="job" name="field4">
-<optgroup label="Lorem Ipsum">
-  <option value="fishkeeping">Lorem</option>
-  <option value="reading">Lorem</option>
-  <option value="boxing">Lorem</option>
-  <option value="debate">Lorem</option>
-  <option value="gaming">Lorem</option>
-  <option value="snooker">Lorem</option>
-  <option value="other_indoor">Lorem</option>
-</optgroup>
-<optgroup label="Lorem Ipsum">
-  <option value="football">Lorem</option>
-  <option value="swimming">SLorem</option>
-  <option value="fishing">Lorem</option>
-  <option value="climbing">Lorem</option>
-  <option value="cycling">Lorem</option>
-  <option value="other_outdoor">Lorem</option>
-</optgroup>
-</select>  
-<label for="job">Day of the Event</label>
-<input type="date" name="field2" placeholder="Enter Date of Event*">
-<textarea name="field3" placeholder="More Details About the Event"></textarea>    
-</fieldset>
-<fieldset>
-<legend><span class="number">3</span> Additional Info (Optional)</legend>
-<textarea name="field3" placeholder="Notes:"></textarea>
-</fieldset>
-<input type="submit" value="Submit" />
-
-
-</form>
-<div class="container">  
   <form id="contact" action="" method="post">
+  <h3>Choose one of these services</h3>
+    <fieldset>
+      <dl class="dropdown"> 
+  
+    <dt>
+    <a href="#">
+      <span class="hida">Select</span>    
+      <p class="multiSel"></p>  
+    </a>
+    </dt>
+  
+    <dd>
+        <div class="mutliSelect">
+            <ul>
+                <li>
+                    <input type="checkbox" value="Apple" />Apple</li>
+                <li>
+                    <input type="checkbox" value="Blackberry" />Blackberry</li>
+                <li>
+                    <input type="checkbox" value="HTC" />HTC</li>
+                <li>
+                    <input type="checkbox" value="Sony Ericson" />Sony Ericson</li>
+                <li>
+                    <input type="checkbox" value="Motorola" />Motorola</li>
+                <li>
+                    <input type="checkbox" value="Nokia" />Nokia</li>
+            </ul>
+        </div>
+    </dd>
+  
+</dl>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+  </form>
+</div>
+<div class="container2">  
+   <form id="contact" action="" method="post">
     <h3>Colorlib Contact Form</h3>
     <h4>Contact us for custom quote</h4>
     <fieldset>
@@ -131,9 +129,15 @@
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
-    <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
+
   </form>
+  </div>
 </div>
+
+
+ 
+
+
       
       <footer id='contacts'>
         
@@ -146,6 +150,41 @@
     <script>
       window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
     </script>
+    <script>
+    $(".dropdown dt a").on('click', function() {
+  $(".dropdown dd ul").slideToggle('fast');
+});
+
+$(".dropdown dd ul li a").on('click', function() {
+  $(".dropdown dd ul").hide();
+});
+
+function getSelectedValue(id) {
+  return $("#" + id).find("dt a span.value").html();
+}
+
+$(document).bind('click', function(e) {
+  var $clicked = $(e.target);
+  if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
+});
+
+$('.mutliSelect input[type="checkbox"]').on('click', function() {
+
+  var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+    title = $(this).val() + ",";
+
+  if ($(this).is(':checked')) {
+    var html = '<span title="' + title + '">' + title + '</span>';
+    $('.multiSel').append(html);
+    $(".hida").hide();
+  } else {
+    $('span[title="' + title + '"]').remove();
+    var ret = $(".hida");
+    $('.dropdown dt a').append(ret);
+
+  }
+});
+</script>
     <script src="javascripts/libs/holder.js" type="text/javascript"></script>
     <script src="javascripts/plugins.js" type="text/javascript"></script>
     <script src="javascripts/formsjs.js" type="text/javascript"></script>
