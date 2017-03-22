@@ -643,9 +643,9 @@ footer {
     position: relative;
     display: block;
     padding: 19px 39px 18px 39px;
-    color: #FFF;
+    color: #214a6d;
     margin: 0 auto;
-    background: #1abc9c;
+    background: #214a6d;
     font-size: 18px;
     text-align: center;
     font-style: normal;
@@ -657,12 +657,12 @@ footer {
 .form-style-5 input[type="submit"]:hover,
 .form-style-5 input[type="button"]:hover
 {
-    background: #109177;
+    background: #214a6d;
 }
 
 footer {
   position: relative;
-  margin: 0;
+  margin: 50px auto 0 0;
   padding: 2em 0;
   height: 150px;
   background: #214a6d; }
@@ -696,6 +696,28 @@ footer {
     width: 100%;
     color: white; }
 
+button {
+  background-color: #214a6d;
+  width: 550px;
+  border: 0;
+  padding: 10px 0;
+  margin-left: 660px;
+
+  text-align: center;
+  color: #fff;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+}
+button:hover {
+  background-color: #1abc9c;
+width: 550px;
+  border: 0;
+  padding: 10px 0;
+  margin-left: 660px;
+  text-align: center;
+  color: #fff;
+}
 </style>
 
 
