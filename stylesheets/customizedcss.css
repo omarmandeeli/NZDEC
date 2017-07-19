@@ -720,14 +720,14 @@ footer {
 .container1 {
   max-width: 400px;
   width: 100%;
-  margin: 150px auto auto 400px ;
+  margin: 200px auto auto 100px ;
   position: relative;
 }
 
 .container2 {
   max-width: 600px;
   width: 100%;
-  margin: -594px 400px 200px auto ;
+  margin: -700px 100px 200px auto ;
   position: relative;
 }
 
