@@ -11,19 +11,77 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <title>Inquire</title>
 
+
     
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-
+    <link href="stylesheets/packagestyle.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
-  
     <link href="stylesheets/customizedcss.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 20%;
+    padding: 8px;
+    margin: 100px auto;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+</style>
   </head>
   <body class='homepage'>
    
+
     <div class='container'>
       <header id='header' class="fixed-top">
    
@@ -63,11 +121,66 @@
 
 
 
+   <div class="columns">
+  <ul class="price">
+    <li class="header">Package 1</li>
+    <li class="grey">P999999</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li class="grey"><a href="#" class="button">Inquire</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Package 1</li>
+    <li class="grey">P999999</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li class="grey"><a href="#" class="button">Inquire</a></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header">Package 1</li>
+    <li class="grey">P999999</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li class="grey"><a href="#" class="button">Inquire</a></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header">Package 1</li>
+    <li class="grey">P999999</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li class="grey"><a href="#" class="button">Inquire</a></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header">Package 1</li>
+    <li class="grey">P999999</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li>Lorem Ipsum</li>
+    <li class="grey"><a href="#" class="button">Inquire</a></li>
+  </ul>
+</div>
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script>
-      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
-    </script>
+    <script> window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>') </script>
     <script>
     $(".dropdown dt a").on('click', function() {
   $(".dropdown dd ul").slideToggle('fast');
@@ -106,5 +219,8 @@ $('.mutliSelect input[type="checkbox"]').on('click', function() {
     <script src="javascripts/libs/holder.js" type="text/javascript"></script>
     <script src="javascripts/plugins.js" type="text/javascript"></script>
     <script src="javascripts/formsjs.js" type="text/javascript"></script>
+
+
   </body>
+
 </html>
