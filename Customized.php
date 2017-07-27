@@ -30,19 +30,19 @@
         <div class='site-main-menu' id='menu'>
           <ul>
             <li>
-              <a href='index.html'>HOME</a>
+              <a href='index.php'>HOME</a>
             </li>
             <li>
-              <a href='index.html'>ABOUT US</a>
+              <a href='index.php'>ABOUT US</a>
             </li>
             <li>
-              <a href='index.html'>PROJECTS</a>
+              <a href='index.php'>PROJECTS</a>
             </li>
             <li>
-              <a href='index.html'>CONTACT</a>
+              <a href='index.php'>CONTACT</a>
             </li>
             <li>
-              <a href='inquire.html'>INQUIRE</a>
+              <a href='inquire.php'>INQUIRE</a>
             </li>
           </ul>
           <span class='follow'>

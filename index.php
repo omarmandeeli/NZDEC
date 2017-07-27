@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html class='no-js'>
-  <!--<![endif]-->
   <head>
 
     <meta charset='utf-8'>
@@ -18,7 +14,8 @@
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
+    <link href="stylesheets/signupstyle.css" media="screen" rel="stylesheet" type="text/css" />
+      <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
     
   </head>
   <body class='homepage'>
@@ -45,22 +42,21 @@
               <a href='#contact'>CONTACT</a>
             </li>
             <li>
-              <a href='Inquire.html'>INQUIRE</a>
+              <a href='Inquire.php'>INQUIRE</a>
             </li>
-          </ul>
-          <span class='follow'>
-            <a class='links' href='#' target='_blank' title='Twitter'>
-              <i class='fa fa-twitter'></i>
-            </a>
+      
+            <button type="submit" name="submit">Login</button>
+            <button type="submit" name="signup">Signup</button>
+         
+         
             
-            <a class='links' href='#' target='_blank' title='Youtube'>
-              <i class='fa fa-facebook'></i>
-            </a>
-            <a class='links' href='#' target='_blank' title='Youtube'>
-              <i class='fa fa-google-plus'></i>
-            </a>
-          </span>
+          
+          
         </div>
+
+   
+
+
         <div class='site-header'>
           <p class='first'>
             Hi there, We Are <span>Zaldy Ducusic Events</span>
@@ -219,6 +215,7 @@
       window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
     </script>
     <script src="javascripts/libs/holder.js" type="text/javascript"></script>
+    <script src="javascripts/libs/signup.js" type="text/javascript"></script>
     <script src="javascripts/plugins.js" type="text/javascript"></script>
     <script src="javascripts/script.js" type="text/javascript"></script>
   </body>

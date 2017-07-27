@@ -539,3 +539,20 @@ footer {
     footer .site-wrapper a {
       font-size: 13px;
       margin: 0.5em 0 5em; } }
+
+
+.container #header .nav-login form input{
+
+  float: left;
+  width: 140px;
+  height: 30px;
+  padding: 0px 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: #ccc;
+  font-family: arial;
+  font-size: 16px;
+  color: #111;
+  line-height: 40px;
+
+}

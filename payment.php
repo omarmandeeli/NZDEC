@@ -1,19 +1,9 @@
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Payment Form Widget Flat Responsive Widget Template :: w3layouts</title>
-<!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Payment Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
@@ -38,19 +28,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class='site-main-menu' id='menu'>
           <ul>
             <li>
-              <a href='index.html'>HOME</a>
+              <a href='index.php'>HOME</a>
             </li>
             <li>
-              <a href='index.html'>ABOUT US</a>
+              <a href='index.php'>ABOUT US</a>
             </li>
             <li>
-              <a href='index.html'>PROJECTS</a>
+              <a href='index.php'>PROJECTS</a>
             </li>
             <li>
-              <a href='index.html'>CONTACT</a>
+              <a href='index.php'>CONTACT</a>
             </li>
             <li>
-              <a href='index.html'>INQUIRE</a>
+              <a href='index.php'>INQUIRE</a>
             </li>
           </ul>
           <span class='follow'>

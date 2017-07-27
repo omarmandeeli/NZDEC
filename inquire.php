@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html class='no-js'>
-  <!--<![endif]-->
+
   <head>
 
     <meta charset='utf-8'>
@@ -30,19 +27,19 @@
         <div class='site-main-menu' id='menu'>
           <ul>
             <li>
-              <a href='index.html'>HOME</a>
+              <a href='index.php'>HOME</a>
             </li>
             <li>
-              <a href='index.html'>ABOUT US</a>
+              <a href='index.php'>ABOUT US</a>
             </li>
             <li>
-              <a href='index.html'>PROJECTS</a>
+              <a href='index.php'>PROJECTS</a>
             </li>
             <li>
-              <a href='index.html'>CONTACT</a>
+              <a href='index.php'>CONTACT</a>
             </li>
             <li>
-              <a href='index.html'>INQUIRE</a>
+              <a href='index.php'>INQUIRE</a>
             </li>
           </ul>
           <span class='follow'>
@@ -105,7 +102,7 @@
 <legend><span class="number">3</span> Additional Info (Optional)</legend>
 <textarea name="field3" placeholder="Notes:"></textarea>
 </fieldset>
- <button name="submit" type="button" id="contact-submit" onclick="location.href='payment.html';">Submit</button>
+ <button name="submit" type="button" id="contact-submit" onclick="location.href='payment.php';">Submit</button>
 
 
 </form>
