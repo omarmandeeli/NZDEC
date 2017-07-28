@@ -39,19 +39,7 @@
               <a href='inquire.php'>INQUIRE</a>
             </li>
           </ul>
-          <span class='follow'>
-            <a class='links' href='#' target='_blank' title='Twitter'>
-              <i class='fa fa-twitter'></i>
-            </a>
-            
-            <a class='links' href='#' target='_blank' title='Youtube'>
-              <i class='fa fa-facebook'></i>
-            </a>
-            <a class='links' href='#' target='_blank' title='Youtube'>
-              <i class='fa fa-google-plus'></i>
-            </a>
-          </span>
-        </div>
+               </div>
         
       </header>
 
@@ -60,21 +48,15 @@
 <dd>
 
 <div class="container2">  
-   <form id="contact" action="" method="post">
+  
     <h3>LogIn</h3>
     
     
-    <fieldset>
-      <input name="u_name" placeholder="Name" type="text" tabindex="1" required autofocus>
-    </fieldset>
+        <form id="contact" action="includes/login.inc.php" method="POST">
+          <input type="text" name="uid" placeholder="username/email">
+          <input type="password" name="pwd" placeholder="password">
+          <button type="submit" name="submit"> Login</button>
 
-    <fieldset>
-      <input name="u_pwd" placeholder="Password" type="Password" tabindex="1" required autofocus>
-    </fieldset>
-   
-
-      <button name="submit" type="button" id="contact-submit">Login</button>
-      
 
 
     </fieldset>

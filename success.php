@@ -1,6 +1,4 @@
-<?php
-  session_start();
-?>
+
 
 <!DOCTYPE html>
 
@@ -49,19 +47,10 @@
               <a href='Inquire.php'>INQUIRE</a>
             </li>
       
+            <button type="submit" name="submit">Login</button>
+            <button type="submit" name="signup">Signup</button>
    
-   
-          <?php 
-      if (isset($_SESSION['u_uid'])) {
-
-        echo '<form action="includes/logout.inc.php"    method="POST">
-        <button type="submit" name="submit">logout</button>
-        </form>';
-      } else {
-        echo '<button type="submit" name="submit">Login</button>
-            <button type="submit" name="signup">Signup</button>';
-      }
-      ?>
+          
           
         </div>
 
