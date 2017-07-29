@@ -52,14 +52,19 @@
    
    
           <?php 
-      if (isset($_SESSION['u_uid'])) {
+      if (isset($ _SESSION['u_uid'])) {
 
         echo '<form action="includes/logout.inc.php"    method="POST">
         <button type="submit" name="submit">logout</button>
-        </form>';
+        </form>
+        <form action="includes/inquire.inc.php"    method="POST">
+        <button type="submit" name="submit">Inquire</button>
+        </form>
+        ';
       } else {
-        echo '<button type="submit" name="submit">Login</button>
-            <button type="submit" name="signup">Signup</button>';
+        echo '<form action="Login.php"><button type="submit" name="submit">
+        Login</button> </form>
+        <form action="Signup.php"> <button type="submit" name="signup">Signup</button> </form>';
       }
       ?>
           

@@ -11,10 +11,9 @@
     
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link href="stylesheets/packagestyle.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/customizedcss.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/packagestyle.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
     <style>
 * {
@@ -137,7 +136,7 @@
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
-    <li class="grey"><a href="#" class="button">Inquire</a></li>
+    <li class="grey"><button type="submit">Inquire</button></li>
   </ul>
 </div>
 <div class="columns">
@@ -175,46 +174,6 @@
 </div>
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script> window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>') </script>
-    <script>
-    $(".dropdown dt a").on('click', function() {
-  $(".dropdown dd ul").slideToggle('fast');
-});
-
-$(".dropdown dd ul li a").on('click', function() {
-  $(".dropdown dd ul").hide();
-});
-
-function getSelectedValue(id) {
-  return $("#" + id).find("dt a span.value").html();
-}
-
-$(document).bind('click', function(e) {
-  var $clicked = $(e.target);
-  if (!$clicked.parents().hasClass("dropdown")) $(".dropdown dd ul").hide();
-});
-
-$('.mutliSelect input[type="checkbox"]').on('click', function() {
-
-  var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
-    title = $(this).val() + ",";
-
-  if ($(this).is(':checked')) {
-    var html = '<span title="' + title + '">' + title + '</span>';
-    $('.multiSel').append(html);
-    $(".hida").hide();
-  } else {
-    $('span[title="' + title + '"]').remove();
-    var ret = $(".hida");
-    $('.dropdown dt a').append(ret);
-
-  }
-});
-</script>
-    <script src="javascripts/libs/holder.js" type="text/javascript"></script>
-    <script src="javascripts/plugins.js" type="text/javascript"></script>
-    <script src="javascripts/formsjs.js" type="text/javascript"></script>
 
 
   </body>
