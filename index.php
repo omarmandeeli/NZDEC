@@ -52,7 +52,12 @@
    
    
           <?php 
-      if (isset($ _SESSION['u_uid'])) {
+      if (isset($_SESSION['u_uid'])) {
+
+
+        include 'dbh.inc.php';
+
+        
 
         echo '<form action="includes/logout.inc.php"    method="POST">
         <button type="submit" name="submit">logout</button>
@@ -60,6 +65,10 @@
         <form action="includes/inquire.inc.php"    method="POST">
         <button type="submit" name="submit">Inquire</button>
         </form>
+
+
+
+
         ';
       } else {
         echo '<form action="Login.php"><button type="submit" name="submit">
