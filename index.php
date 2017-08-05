@@ -52,7 +52,21 @@
    
    
           <?php 
-      if (isset($ _SESSION['u_uid'])) {
+      if (isset($_SESSION['u_uid'])) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
+
+
+        include 'dbh.inc.php';
+
+        
+<<<<<<< HEAD
+>>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
+=======
+>>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
 
         echo '<form action="includes/logout.inc.php"    method="POST">
         <button type="submit" name="submit">logout</button>
@@ -60,6 +74,10 @@
         <form action="includes/inquire.inc.php"    method="POST">
         <button type="submit" name="submit">Inquire</button>
         </form>
+
+
+
+
         ';
       } else {
         echo '<form action="Login.php"><button type="submit" name="submit">

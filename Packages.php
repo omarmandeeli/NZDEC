@@ -1,3 +1,9 @@
+<?php
+  session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html class='no-js'>
 
@@ -12,66 +18,12 @@
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    
     <link href="stylesheets/packagestyle.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
     <style>
-* {
-    box-sizing: border-box;
-}
 
-.columns {
-    float: left;
-    width: 20%;
-    padding: 8px;
-    margin: 100px auto;
-}
-
-.price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.price:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-.price .header {
-    background-color: #111;
-    color: white;
-    font-size: 25px;
-}
-
-.price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
-}
-
-.price .grey {
-    background-color: #eee;
-    font-size: 20px;
-}
-
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
-    .columns {
-        width: 100%;
-    }
-}
 </style>
   </head>
   <body class='homepage'>
@@ -110,7 +62,23 @@
               <i class='fa fa-google-plus'></i>
             </a>
           </span>
+
+         <?php 
+      if (isset($_SESSION['u_uid'])) {
+
+        echo '<form action="includes/logout.inc.php"    method="POST">
+        <button type="submit" name="submit">logout</button>
+        </form>
+        ';
+      } else {
+        echo '<form action="Login.php"><button type="submit" name="submit">
+        Login</button> </form>
+        <form action="Signup.php"> <button type="submit" name="signup">Signup</button> </form>';
+      }
+      ?>
         </div>
+
+        
         
       </header>
 
@@ -124,7 +92,7 @@
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
-    <li class="grey"><a href="#" class="button">Inquire</a></li>
+   <li class="grey"><button type="submit">Inquire</button></li>
   </ul>
 </div>
 
@@ -147,7 +115,7 @@
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
-    <li class="grey"><a href="#" class="button">Inquire</a></li>
+    <li class="grey"><button type="submit">Inquire</button></li>
   </ul>
 </div>
 <div class="columns">
@@ -158,7 +126,7 @@
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
-    <li class="grey"><a href="#" class="button">Inquire</a></li>
+    <li class="grey"><button type="submit">Inquire</button></li>
   </ul>
 </div>
 <div class="columns">
@@ -169,7 +137,7 @@
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
     <li>Lorem Ipsum</li>
-    <li class="grey"><a href="#" class="button">Inquire</a></li>
+    <li class="grey"><button type="submit">Inquire</button></li>
   </ul>
 </div>
 

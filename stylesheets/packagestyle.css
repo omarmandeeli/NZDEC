@@ -934,7 +934,7 @@ a {
 
 button {
   background-color: #214a6d;
-  width: 550px;
+  width: 140px;
   border: 0;
   padding: 10px 0;
   margin: 5px 0;
@@ -946,7 +946,7 @@ button {
 }
 button:hover {
   background-color: #1abc9c;
-  width: 550px;
+  width: 140px;
   border: 0;
   padding: 10px 0;
   margin: 5px 0;
@@ -954,6 +954,49 @@ button:hover {
   color: #fff;
 
 }
+
+
+
+form button {
+  float: left;
+  background-color: #214a6d;
+  width: 140px;
+  border: 0;
+  padding: 10px 0;
+  margin: 5px 0;
+  text-align: center;
+  color: #fff;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+}
+form button:hover {
+  float: left;
+  background-color: #1abc9c;
+  width: 140px;
+  border: 0;
+  padding: 10px 0;
+  margin: 5px 0;
+  text-align: center;
+  color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .number1 {
     background: #1abc9c;
     color: #fff;
@@ -983,4 +1026,62 @@ button:hover {
 
 article.container {
     padding: 50px 0 140px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 20%;
+    padding: 8px;
+    margin: 100px auto;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
 }
