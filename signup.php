@@ -54,6 +54,10 @@
       <input name="first" placeholder="Firstname" type="text" >
 
       <input name="last" placeholder="Lastname" type="text">
+
+      <input name="address" placeholder="Address" type="text">
+
+      <input name="contact" placeholder="Contact" type="text">
  
       <input name="email" placeholder="Email" type="text">
 

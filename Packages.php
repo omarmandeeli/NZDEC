@@ -1,145 +1,43 @@
 <?php
   session_start();
+
+  include_once 'packages-header.php';
+
+  include 'includes/dbh.inc.php';
+
+mysqli_select_db($conn, "test");
+$sql = "SELECT * FROM package";
+$data = mysqli_query($conn, $sql);
+
+
+while ($record = mysqli_fetch_array($data)) {
+
+$id = $record['package_id'];
+
+echo "<table border = 1>";
+echo "<tr>";
+echo "<th>" . $record['package_name'] . "</th>";
+
+
+echo "</tr>";
+echo "<tr>"; 
+echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
+
+echo "<tr/>";
+
+echo  "<td><a  href='package.all.php?id=$id'>Submit</a></td>";
+
+}
+
+echo "</table>";
+
+
+
+
 ?>
 
 
 
-<!DOCTYPE html>
-<html class='no-js'>
-
-  <head>
-
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>Inquire</title>
-
-
-    
-
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
-    
-    <link href="stylesheets/packagestyle.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    <style>
-
-</style>
-  </head>
-  <body class='homepage'>
-   
-
-    <div class='container'>
-      <header id='header' class="fixed-top">
-   
-        <div class='site-main-menu' id='menu'>
-          <ul>
-            <li>
-              <a href='index.php'>HOME</a>
-            </li>
-            <li>
-              <a href='index.php'>ABOUT US</a>
-            </li>
-            <li>
-              <a href='index.php'>PROJECTS</a>
-            </li>
-            <li>
-              <a href='index.php'>CONTACT</a>
-            </li>
-            <li>
-              <a href='inquire.php'>INQUIRE</a>
-            </li>
-          </ul>
-          <span class='follow'>
-            <a class='links' href='#' target='_blank' title='Twitter'>
-              <i class='fa fa-twitter'></i>
-            </a>
-            
-            <a class='links' href='#' target='_blank' title='Youtube'>
-              <i class='fa fa-facebook'></i>
-            </a>
-            <a class='links' href='#' target='_blank' title='Youtube'>
-              <i class='fa fa-google-plus'></i>
-            </a>
-          </span>
-
-         <?php 
-      if (isset($_SESSION['u_uid'])) {
-
-        echo '<form action="includes/logout.inc.php"    method="POST">
-        <button type="submit" name="submit">logout</button>
-        </form>
-        ';
-      } else {
-        echo '<form action="Login.php"><button type="submit" name="submit">
-        Login</button> </form>
-        <form action="Signup.php"> <button type="submit" name="signup">Signup</button> </form>';
-      }
-      ?>
-        </div>
-
-        
-        
-      </header>
-
-
-
-   <div class="columns">
-  <ul class="price">
-    <li class="header">Package 1</li>
-    <li class="grey">P999999</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-   <li class="grey"><button type="submit">Inquire</button></li>
-  </ul>
-</div>
-
-<div class="columns">
-  <ul class="price">
-    <li class="header">Package 1</li>
-    <li class="grey">P999999</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li class="grey"><button type="submit">Inquire</button></li>
-  </ul>
-</div>
-<div class="columns">
-  <ul class="price">
-    <li class="header">Package 1</li>
-    <li class="grey">P999999</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li class="grey"><button type="submit">Inquire</button></li>
-  </ul>
-</div>
-<div class="columns">
-  <ul class="price">
-    <li class="header">Package 1</li>
-    <li class="grey">P999999</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li class="grey"><button type="submit">Inquire</button></li>
-  </ul>
-</div>
-<div class="columns">
-  <ul class="price">
-    <li class="header">Package 1</li>
-    <li class="grey">P999999</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li>Lorem Ipsum</li>
-    <li class="grey"><button type="submit">Inquire</button></li>
-  </ul>
-</div>
 
 
 

@@ -562,7 +562,7 @@ footer {
 .form-style-5 label {
     display: block;
     margin-bottom: 8px;
-    margin: 0 0 0 260px;
+    margin: 50px 0 0 260px;
 }
 .form-style-5 input[type="text"],
 .form-style-5 input[type="date"],
@@ -932,12 +932,36 @@ a {
   background-color: #fff;
 }
 
+
+form button {
+  background-color: #214a6d;
+  width: 140px;
+  border: 0;
+  padding: 5px 0;
+   margin: 0px 0 5px 50px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+}
+form button:hover {
+  background-color: #1abc9c;
+  width: 140px;
+  border: 0;
+  padding: 5px 0;
+  margin: 0px 0 5px 50px;
+  text-align: center;
+  color: #fff;
+
+}
+
 button {
   background-color: #214a6d;
   width: 140px;
   border: 0;
-  padding: 10px 0;
-  margin: 5px 0;
+  padding: 5px 0;
+   margin: 0px 0 5px 50px;
   text-align: center;
   color: #fff;
   -webkit-transition-duration: 0.4s;
@@ -948,140 +972,88 @@ button:hover {
   background-color: #1abc9c;
   width: 140px;
   border: 0;
-  padding: 10px 0;
-  margin: 5px 0;
+  padding: 5px 0;
+  margin: 0px 0 5px 50px;
   text-align: center;
   color: #fff;
 
 }
 
 
+table {
 
-form button {
+  width: 200px;
+  border-collapse: collapse;
+  margin-top: 150px;
+  margin-right: 50px;
   float: left;
-  background-color: #214a6d;
-  width: 140px;
-  border: 0;
-  padding: 10px 0;
-  margin: 5px 0;
+
+}
+
+th{
+
+  background: #eee;
+  color: #777;
+  padding: 15px;
+  
+  
+}
+
+tr:nth-child(even){
+
+  background: #eee;
+
+
+ 
+
+}
+td{
+  width: 10px;
   text-align: center;
-  color: #fff;
-  -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-
-}
-form button:hover {
-  float: left;
-  background-color: #1abc9c;
-  width: 140px;
-  border: 0;
-  padding: 10px 0;
-  margin: 5px 0;
-  text-align: center;
-  color: #fff;
-
+   word-wrap: break-word; 
+   padding-bottom: 15px;
 }
 
+input[type="submit"]{
+cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #1abc9c;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.number1 {
-    background: #1abc9c;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    margin-top: 10px;
-    line-height: 30px;
-
+.sbutton {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-    border-radius: 15px 15px 15px 0px;
-  }
-    .form-style-5{
-    max-width: 500px;
-    padding: 10px 20px;
-    background: #f4f7f8;
-    margin: 10px auto;
-    padding: 20px 0 0 0;
-    background: #f4f7f8;
-    border-radius: 8px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-
-    }
-
-article.container {
-    padding: 50px 0 140px;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-.columns {
-    float: left;
-    width: 20%;
-    padding: 8px;
-    margin: 100px auto;
-}
-
-.price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.price:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-.price .header {
-    background-color: #111;
+    border-radius: 5px;
     color: white;
-    font-size: 25px;
+    font-weight: bold;
 }
 
-.price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
+.logout button [type="submit"]{
+
+cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #1abc9c;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;;
+
 }
 
-.price .grey {
-    background-color: #eee;
-    font-size: 20px;
-}
-
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
-    .columns {
-        width: 100%;
-    }
-}

@@ -55,7 +55,7 @@
         <form id="contact" action="includes/login.inc.php" method="POST">
           <input type="text" name="uid" placeholder="username/email">
           <input type="password" name="pwd" placeholder="password">
-          <button type="submit" name="submit"> Login</button>
+          <button type="submit" name="submit">Login</button>
 
 
 

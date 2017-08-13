@@ -46,33 +46,19 @@
               <a href='#contact'>CONTACT</a>
             </li>
             <li>
-              <a href='Inquire.php'>INQUIRE</a>
+              <a href='signup.php'>INQUIRE</a>
             </li>
+            
       
    
    
           <?php 
       if (isset($_SESSION['u_uid'])) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
-=======
->>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
 
 
-        include 'dbh.inc.php';
+        include 'includes/dbh.inc.php';
 
         
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
-=======
->>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
-=======
->>>>>>> d5ff7071c96ee59d00391b1dac4f63a1e3e4f25f
 
         echo '<form action="includes/logout.inc.php"    method="POST">
         <button type="submit" name="submit">logout</button>
@@ -86,9 +72,9 @@
 
         ';
       } else {
-        echo '<form action="Login.php"><button type="submit" name="submit">
+        echo '<form action="login.php"><button type="submit" name="submit">
         Login</button> </form>
-        <form action="Signup.php"> <button type="submit" name="signup">Signup</button> </form>';
+        <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
       }
       ?>
           
