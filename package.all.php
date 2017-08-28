@@ -1,65 +1,141 @@
 <?php
- session_start();
-$id = $_GET['id'];
- 
-include 'includes/dbh.inc.php';
- 
- 
- 
-$query = "SELECT * FROM package WHERE package_id = '$id'";
-mysqli_query($conn, $query) or die('Database error!');
-/*
-if (isset['submit']) {
-  
+  session_start();
+
+  include_once 'packages-header.php';
+
+  include 'includes/dbh.inc.php';
+
+mysqli_select_db($conn, "test");
+$sql = "SELECT * FROM package";
+$data = mysqli_query($conn, $sql);
+
+
+while ($record = mysqli_fetch_array($data)) {
+
+$id = $record['package_id'];
+
+echo "<table border = 1>";
+echo "<tr>";
+echo "<th>" . $record['package_name'] . "</th>";
+
+
+echo "</tr>";
+echo "<tr>"; 
+echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
+
+echo "<tr/>";
+
+echo  "<td><a  href='package.all.php?id=$id'>Submit</a></td>";
+
+
+
 }
-*/
 
-?> 
+echo "</table>";
+
+if (isset($_POST['submit'])) {
 
 
-<!DOCTYPE html>
 
-<html class='no-js'>
+$p_id = $_GET['id'];
+$c_id = $_SESSION['u_id'];
+$e_name = mysqli_real_escape_string($conn, $_POST['e_name']) ;
+$d_event = mysqli_real_escape_string($conn, $_POST['d_event']) ;
+$t_event = mysqli_real_escape_string($conn, $_POST['t_event']) ;
+$e_t_event = mysqli_real_escape_string($conn, $_POST['e_t_event']) ;
+$theme = mysqli_real_escape_string($conn, $_POST['theme']) ;
+$venue = mysqli_real_escape_string($conn, $_POST['venue']) ;
+date_default_timezone_set('Asia/Manila');
+$date = date('Y/m/d'). substr((string)1, 6);
+$time = date('H:i');
 
-  <head>
 
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>Inquire</title>
+  if (empty($e_name) || empty($d_event) || empty($t_event) || empty($e_t_event) || empty($theme)){
 
+    header("Location:../Packages.all.php?empty");
+    exit();
+  }
+
+  else{
+    $sql = "SELECT * FROM event_table WHERE event_date = '$d_event'" ;
+    $result = mysqli_query($conn, $sql);
+    $resultcheck = mysqli_num_rows($result);
+
+
+ if(!$result){
+        echo("Error description: " . mysqli_error($conn));
     
+}
 
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    if ($resultcheck>=1) {
+      header("Location:../Packages.all..overload.php?input=datescheduled");
+  exit();
+    }
 
-    <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
-  
-    <link href="stylesheets/formsstyle.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    
-  </head>
-  <body class='homepage'>
-   
-    <div class='container'>
-      <header id='header' class="fixed-top">
-   
-        <div class='site-main-menu' id='menu'>
-          <ul>
-            <li>
-              <a href='index.php'>HOME</a>
-            </li>
-            <li>
-              <a href='index.php'>ABOUT US</a>
-            </li>
-            <li>
-              <a href='index.php'>PROJECTS</a>
-            </li>
-            <li>
-              <a href='index.php'>CONTACT</a>
-            </li>
-            <li>
-              <a href='index.php'>INQUIRE</a>
-            </li>
+
+
+
+else{
+
+
+
+
+
+$sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, venue, reserve_date, reserve_time, package_id) VALUES ('$e_name', '$d_event', '$t_event', '$e_t_event', '$c_id', '$theme', '$venue', '$date', '$time', '$p_id');";
+$result = mysqli_query ($conn, $sql);
+
+
+$newest_id = mysqli_insert_id($conn);
+$reservation_type = 1;
+$order_q = 1;
+
+$sql = "SELECT * FROM admin WHERE admin_id = '1'" ;
+$result = mysqli_query($conn, $sql);
+$resultcheck = mysqli_num_rows($result);
+
+
+$sql = "INSERT INTO reservation (reservation_type_id, admin_id, event_id, res_expires) VALUES ('$reservation_type', '$resultcheck', '$newest_id', NOW() + INTERVAL 24 HOUR );";
+$result = mysqli_query ($conn, $sql);
+
+//price
+$p_sql = "SELECT package_price from package WHERE package_id = '$p_id'" ;
+$p_result = mysqli_query($conn, $p_sql);
+$price = mysqli_fetch_assoc($p_result);
+
+
+$p_p = $price['package_price'];
+
+
+$sql = "INSERT INTO order_list (order_qnty, event_id, amount) VALUES ('$order_q', '$newest_id', '$p_p');";
+$result = mysqli_query ($conn, $sql);
+$order_n_id = mysqli_insert_id($conn);
+
+ header("Location:order.confirmation.php?n_id=$newest_id&new_p_id=$p_id&o_id=$order_n_id");
+
+
+
+ if(!$result){
+        echo("Error description: " . mysqli_error($conn));
+    }
+}
+
+
+
+
+}
+}
+ else {
+
+ 
+}
+
+
+
+?>
+
+
+
+
 
                <?php 
       if (isset($_SESSION['u_uid'])) {
@@ -96,28 +172,30 @@ if (isset['submit']) {
 
       </header>
 
-
 <div class="form-style-5">
-<form class="sevent">
+
 
 <form method="POST">
-
 <label>Event Name</label>
-<input type="text" name="field2" placeholder="Enter Event Name*">
+<input type="text" name="e_name" placeholder="Enter Event Name*"/>
 
 <label for="job">Day of the Event</label>
-<input type="date" name="field2" placeholder="Enter Date of Event*">
+<input type="date" name="d_event" placeholder="Enter Date of Event*"/>
 
 
 <label for="job">Time of the Event</label>
-<input type="date" name="field2" placeholder="Enter Date of Event*">
+<input type="Time" name="t_event" placeholder="Enter Time of Event*"/>
 
 <label for="job">End Time of the Event</label>
-<input type="date" name="field2" placeholder="Enter Date of Event*">
+<input type="Time" name="e_t_event" placeholder="Enter End Time of Event*"/>
 
 <label>Theme</label>
-<input type="text" name="field2" placeholder="Enter Theme*">
- <button name="submit" type="button" id="contact-submit" onclick="location.href='payment.php';">Submit</button>
+<input type="text" name="theme" placeholder="Enter Theme*"/>
+
+<label>Venue</label>
+<input type="text" name="venue" placeholder="Enter Venue*"/>
+
+<input name="submit" type="submit" value="Submit"/>
 </form>
 
       
@@ -135,5 +213,5 @@ if (isset['submit']) {
     <script src="javascripts/libs/holder.js" type="text/javascript"></script>
     <script src="javascripts/plugins.js" type="text/javascript"></script>
     <script src="javascripts/formsjs.js" type="text/javascript"></script>
-  </body>
+  
 </html>

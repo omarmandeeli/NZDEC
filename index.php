@@ -66,6 +66,9 @@
         <form action="includes/inquire.inc.php"    method="POST">
         <button type="submit" name="submit">Inquire</button>
         </form>
+        <form action="includes/reservation.inc.php"    method="POST">
+        <button type="submit" name="submit">Reservations</button>
+        </form>
 
 
 

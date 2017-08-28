@@ -1,0 +1,1076 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic);
+/* line 3, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 8, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+body {
+  font-family: Lato;
+  font-size: 18px; }
+  /* line 12, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  body a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    font-weight: 600;
+    outline: 0; }
+
+/* line 19, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+.container {
+  background: white; }
+  /* line 22, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .container .site-what-i-do {
+    width: 100%;
+    height: auto;
+    padding: 2em 0 4em;
+    background: #ecf0f1;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) inset; }
+    /* line 31, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .container .site-what-i-do .site-what-i-do-box {
+      width: 33.29%;
+      height: auto;
+      float: left;
+      text-align: center;
+      overflow: hidden; }
+      /* line 38, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      .container .site-what-i-do .site-what-i-do-box .site-what-i-do-box-top {
+        position: relative;
+        padding: 0 0 0.3em;
+        margin: 0 auto;
+        width: 90%;
+        border: 1px solid lightgrey;
+        padding: 1em 1em 0em;
+        background: #214a6d; }
+        /* line 47, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+        .container .site-what-i-do .site-what-i-do-box .site-what-i-do-box-top p {
+          font-size: 1.5em;
+          font-weight: 300;
+          margin: 0.5em 0 0.5em;
+          color: white; }
+        /* line 53, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+        .container .site-what-i-do .site-what-i-do-box .site-what-i-do-box-top i {
+          border: 2px solid white;
+          border-radius: 60px;
+          font-size: 3em;
+          display: block;
+          width: 100px;
+          height: 100px;
+          line-height: 90px;
+          margin: 0em auto 0;
+          color: white; }
+      /* line 64, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      .container .site-what-i-do .site-what-i-do-box .site-what-i-do-box-bot {
+        width: 90%;
+        margin: 0 auto;
+        border-left: 1px solid lightgrey;
+        border-right: 1px solid lightgrey;
+        padding: 0.5em 1em 1em;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+        background: white; }
+        /* line 74, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+        .container .site-what-i-do .site-what-i-do-box .site-what-i-do-box-bot p {
+          margin: 0.5em 0 0;
+          font-size: 15px;
+          font-weight: 300; }
+  /* line 79, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .container .site-projects {
+    width: 100%;
+    height: auto;
+    padding: 7em 0 7em;
+    background: white;
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
+    /* line 88, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .container .site-projects .site-wrapper {
+      width: 100% !important;
+      max-width: 1280px; }
+    /* line 92, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .container .site-projects .site-projects-box {
+      width: 500px;
+      display: inline-block;
+      margin: 0 1.5em;
+      vertical-align: top; }
+    /* line 98, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .container .site-projects .site-projects-top {
+      position: relative;
+      text-align: center; }
+      /* line 102, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      .container .site-projects .site-projects-top p {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        color: #214a6d;
+        font-size: 1.5em;
+        font-weight: 600; }
+      /* line 110, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      .container .site-projects .site-projects-top span {
+        width: 100%;
+        text-align: center;
+        font-weight: 300;
+        font-size: 0.9em;
+        padding: 0.5em 0;
+        display: inline-block; }
+    /* line 118, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .container .site-projects .site-projects-bot {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      margin: 2em 0 3em;
+      max-height: 300px;
+      display: block;
+      overflow: hidden;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+      /* line 129, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      .container .site-projects .site-projects-bot img {
+        margin: 0 auto;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.2); }
+
+/* line 135, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+.site-wrapper {
+  position: relative;
+  width: 980px;
+  margin: 0 auto; }
+  /* line 140, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-wrapper .site-wrapper-title {
+    position: relative;
+    padding: 0 0 2em 0; }
+    /* line 144, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .site-wrapper .site-wrapper-title h2 {
+      padding: 0;
+      margin: 0 auto;
+      text-align: center;
+      color: #214a6d;
+      font-size: 2em; }
+
+/* line 151, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+header {
+
+  }
+  /* line 164, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header.fixed-top .site-main-menu {
+    background: #222222;
+    box-shadow: 0 -2px 0 0 #2e8ece inset; }
+  /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header .parallax {
+    
+  }
+  /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header .site-logo {
+    position: relative;
+    z-index: 1;
+    float: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    /* line 188, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-logo h1 {
+      color: #fdfdfd;
+      font-weight: 600;
+      margin: 0;
+      padding: 1em;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      cursor: default; }
+  /* line 200, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header .site-main-menu {
+    float: right;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    padding: 1.2em 0;
+    z-index: 10;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    /* line 212, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-main-menu ul {
+      padding: 0;
+      margin: 0 10px;
+      display: block; }
+      /* line 217, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header .site-main-menu ul li {
+        float: left;
+        padding: 0 0.5em 0 1em;
+        list-style: none; }
+        /* line 222, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+        header .site-main-menu ul li a {
+          color: #fdfdfd;
+          margin: 0;
+          display: block;
+          text-decoration: none;
+          border: 0; }
+  /* line 229, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header .site-header {
+    z-index: 1;
+    top: 50%;
+    height: 210px;
+    margin: -105px auto 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: relative; }
+    /* line 239, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-header p.first {
+      font-size: 2em;
+      line-height: 1.2em;
+      font-weight: 300;
+      margin-bottom: 0;
+      display: inline-block;
+      float: left;
+      width: 100%; }
+      /* line 248, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header .site-header p.first span {
+        font-weight: 600;
+        color: #2e8ece; }
+    /* line 252, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-header div.hr {
+      height: 1px;
+      border-bottom: 1px solid #3db4ff;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      margin: 1em auto;
+      width: 40%;
+      opacity: 0.4; }
+      /* line 260, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header .site-header div.hr.left {
+        float: left; }
+      /* line 263, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header .site-header div.hr.right {
+        float: right; }
+    /* line 266, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-header p {
+      font-size: 1.3em;
+      line-height: 1.2em;
+      font-weight: 300;
+      margin-top: 0;
+      display: inline-block;
+      float: left;
+      width: 100%; }
+  /* line 275, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header span.follow {
+    display: inline-block;
+    padding-top: 1em;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: auto; }
+    /* line 287, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header span.follow a {
+      text-decoration: none;
+      border: 0;
+      padding: 0 10px; }
+    /* line 292, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header span.follow i {
+      font-size: 30px; }
+      /* line 295, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header span.follow i.fa-youtube {
+        color: #cc181e; }
+      /* line 298, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header span.follow i.fa-twitter {
+        color: #55acee; }
+  /* line 301, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  header .site-proceed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center; }
+    /* line 307, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-proceed a {
+      text-decoration: none;
+      border: 0;
+      bottom: 20%;
+      position: absolute;
+      -webkit-animation: clicky 1s infinite;
+      -moz-animation: clicky 1s infinite;
+      -o-animation: clicky 1s infinite;
+      animation: clicky 1s infinite; }
+      /* line 317, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      header .site-proceed a:hover {
+        bottom: 20% !important; }
+    /* line 320, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    header .site-proceed i {
+      font-size: 4em;
+      color: white;
+      font-weight: 300; }
+
+/* line 325, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+.site-clients-container {
+  padding: 2em 0;
+  text-align: center;
+  background: #ecf0f1; }
+  /* line 330, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-clients-container .site-wrapper {
+    width: 100%;
+    max-width: 100%; }
+  /* line 334, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-clients-container .site-client-box {
+    display: inline-block;
+    width: 15%;
+    padding: 1em 0 2em; }
+    /* line 339, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .site-clients-container .site-client-box img {
+      width: 70%; }
+
+/* line 342, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+footer {
+  position: relative;
+  margin: 0;
+  padding: 2em 0;
+  height: 300px;
+  background: #214a6d; }
+  /* line 349, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  footer .site-wrapper {
+    text-align: center; }
+    /* line 352, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper p.interested {
+      font-weight: 300;
+      color: white; }
+      /* line 356, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      footer .site-wrapper p.interested > a {
+        border: none; }
+    /* line 359, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper p {
+      font-weight: 600;
+      color: white; }
+      /* line 363, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      footer .site-wrapper p > a {
+        border: none; }
+    /* line 366, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper a {
+      margin: 0.5em 0 2em;
+      font-weight: 600; }
+  /* line 370, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  footer span.cc {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: white; }
+
+/* line 378, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+.btn {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  color: white;
+  margin: 0 auto;
+  background: none repeat scroll 0 0 #3db4ff;
+  position: relative;
+  opacity: 0.8; }
+  /* line 389, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .btn:hover {
+    opacity: 1; }
+  /* line 392, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .btn:active {
+    border-bottom: 0px;
+    top: 3px; }
+
+@-webkit-keyframes clicky {
+  /* line 398, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  0% {
+    opacity: 0;
+    bottom: 20%; }
+
+  /* line 401, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  20% {
+    opacity: 0.5;
+    bottom: 22%; }
+
+  /* line 404, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  100% {
+    opacity: 1;
+    bottom: 20%; } }
+
+@-moz-keyframes clicky {
+  /* line 409, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  0% {
+    opacity: 1;
+    bottom: 20%; }
+
+  /* line 412, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  20% {
+    opacity: 0.5;
+    bottom: 22%; }
+
+  /* line 415, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  100% {
+    opacity: 1;
+    bottom: 20%; } }
+
+@-o-keyframes clicky {
+  /* line 420, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  0% {
+    opacity: 1;
+    bottom: 20%; }
+
+  /* line 423, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  20% {
+    opacity: 0.5;
+    bottom: 22%; }
+
+  /* line 426, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  100% {
+    opacity: 1;
+    bottom: 20%; } }
+
+@keyframes clicky {
+  /* line 431, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  0% {
+    opacity: 1;
+    bottom: 20%; }
+
+  /* line 434, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  20% {
+    opacity: 0.5;
+    bottom: 22%; }
+
+  /* line 437, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  100% {
+    opacity: 1;
+    bottom: 20%; } }
+
+@media only screen and (min-width: 981px) {
+  /* line 444, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .slicknav_menu {
+    display: none; } }
+@media only screen and (max-width: 980px) {
+  /* line 451, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-main-menu {
+    display: none; }
+
+  /* line 454, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  #header {
+    height: auto !important; }
+    /* line 457, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    #header .parallax {
+      background-size: 980px auto !important; }
+    /* line 460, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    #header .site-header p.first {
+      font-size: 1.8em; }
+
+  /* line 463, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-header {
+    height: auto !important;
+    left: 0 !important;
+    margin: 150px auto 0 !important;
+    padding: 0 30px !important;
+    top: -70px !important;
+    width: 100% !important; }
+
+  /* line 471, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-proceed {
+    display: none; }
+
+  /* line 474, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-logo h1 {
+    display: none;
+    position: absolute;
+    top: 0; }
+
+  /* line 479, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-wrapper {
+    width: 100%; }
+
+  /* line 482, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-what-i-do-box {
+    margin: 0 0 20px;
+    width: 100% !important; }
+    /* line 486, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .site-what-i-do-box .site-what-i-do-box-bot > p {
+      text-align: left; }
+
+  /* line 489, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  #projects {
+    padding: 50px 30px 0; }
+
+  /* line 492, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-projects-box {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important; }
+    /* line 497, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    .site-projects-box .site-projects-bot {
+      max-height: 100% !important; }
+
+  /* line 500, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  .site-client-box {
+    width: 50% !important; }
+
+  /* line 503, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  footer {
+    height: auto;
+    padding: 0 15px; }
+    /* line 507, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper p {
+      font-size: 14px; }
+    /* line 510, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper a {
+      font-size: 13px;
+      margin: 0.5em 0 5em; } }
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+.form-style-5{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px 0 0 0;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+.form-style-5 fieldset{
+    border: none;
+    margin: 0 0 0 260px;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    margin: 30px 0 0 260px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+    margin: 50px 0 0 260px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0 0 0 260px;
+    outline: 0;
+    padding: 7px;
+    width: 50%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+.form-style-5 .number1 {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    margin-top: 100px;
+    line-height: 30px;
+
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #214a6d;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 35%;
+    border: 1px solid #214a6d;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: #214a6d;
+}
+*/
+footer {
+  position: relative;
+  margin: 0;
+  padding: 2em 0;
+  height: 150px;
+  background: #214a6d; }
+  /* line 349, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  footer .site-wrapper {
+    text-align: center; }
+    /* line 352, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper p.interested {
+      font-weight: 300;
+      color: white; }
+      /* line 356, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      footer .site-wrapper p.interested > a {
+        border: none; }
+    /* line 359, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper p {
+      font-weight: 600;
+      color: white; }
+      /* line 363, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+      footer .site-wrapper p > a {
+        border: none; }
+    /* line 366, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+    footer .site-wrapper a {
+      margin: 0.5em 0 2em;
+      font-weight: 600; }
+  /* line 370, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+  footer span .cc {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: white; }
+
+
+
+
+
+</style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+.container1 {
+  max-width: 400px;
+  width: 100%;
+  margin: 200px auto auto 100px ;
+  position: relative;
+}
+
+.container2 {
+  max-width: 600px;
+  width: 100%;
+  margin: -700px 100px 200px auto ;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 10px 0 auto auto;
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #1abc9c;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #1abc9c;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+
+
+
+
+
+.dropdown {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.dropdown dd,
+.dropdown dt {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropdown ul {
+  margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+  position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+}
+
+.dropdown dt a {
+  background-color: #4F6877;
+  display: block;
+
+  padding: 8px 16px 1px 10px;
+  min-height: 25px;
+  line-height: 15px;
+  overflow: hidden;
+  border: 0;
+  width: 100%;
+}
+
+.dropdown dt a span,
+.multiSel span {
+  cursor: pointer;
+
+  display: inline-block;
+  padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+  background-color: #4F6877;
+  border: 0;
+  color: #fff;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: absolute;
+  top: 2px;
+  width: 100%;
+  list-style: none;
+  height: 100px;
+  overflow: auto;
+}
+
+.dropdown span.value {
+  display: none;
+}
+
+.dropdown dd ul li a {
+  padding: 5px;
+  display: block;
+}
+
+.dropdown dd ul li a:hover {
+  background-color: #fff;
+}
+
+
+form button {
+  background-color: #214a6d;
+  width: 140px;
+  border: 0;
+  padding: 5px 0;
+   margin: 0px 0 5px 50px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+}
+form button:hover {
+  background-color: #1abc9c;
+  width: 140px;
+  border: 0;
+  padding: 5px 0;
+  margin: 0px 0 5px 50px;
+  text-align: center;
+  color: #fff;
+
+}
+
+button {
+  background-color: #214a6d;
+  width: 140px;
+  border: 0;
+  padding: 5px 0;
+   margin: 0px 0 5px 50px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+}
+button:hover {
+  background-color: #1abc9c;
+  width: 140px;
+  border: 0;
+  padding: 5px 0;
+  margin: 0px 0 5px 50px;
+  text-align: center;
+  color: #fff;
+
+}
+
+
+table {
+
+  width: 200px;
+  border-collapse: collapse;
+  margin-top: 200px;
+  margin-right: 10px;
+  float: left;
+
+}
+
+th{
+
+  background: #eee;
+  color: #777;
+  padding: 15px;
+  
+  
+}
+
+tr:nth-child(even){
+
+  background: #eee;
+
+
+ 
+
+}
+td{
+  width: 10px;
+  text-align: center;
+   word-wrap: break-word; 
+   padding-bottom: 15px;
+}
+
+input[type="submit"]{
+cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #1abc9c;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;;
+
+}
+
+.sbutton {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.logout button [type="submit"]{
+
+cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #1abc9c;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;;
+
+}
+
+
+
+#content-payment{
+
+  position: absolute;
+  margin: 500px 0 0 450px ;
+  border: 1px solid #cbcbcb;
+}
+#content-payment form {
+
+ 
+  margin: 10px 0 0 0;
+  float: right;
+
+
+}
+
+form div{
+  margin-top: 5px;
+}
+
