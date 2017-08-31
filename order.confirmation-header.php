@@ -62,9 +62,7 @@
 
         ';
       } else {
-        echo '<form action="login.php"><button type="submit" name="submit">
-        Login</button> </form>
-        <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
+        header("Location: ../signup.php");
       }
       ?>
 
