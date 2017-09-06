@@ -11,16 +11,16 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <title>Zaldy Ducusin Events And Consultancy</title>
 
-    
+
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
-    
+
       <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    
+
   </head>
   <body class='homepage'>
     <!--[if lt IE 8]>
@@ -48,17 +48,17 @@
             <li>
               <a href='signup.php'>PACKAGE</a>
             </li>
-            
-      
-   
-   
-          <?php 
+
+
+
+
+          <?php
       if (isset($_SESSION['u_uid'])) {
 
 
         include 'includes/dbh.inc.php';
 
-        
+
 
         echo '<form action="includes/logout.inc.php"    method="POST">
         <button type="submit" name="submit">logout</button>
@@ -80,10 +80,10 @@
         <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
       }
       ?>
-          
+
         </div>
 
-   
+
 
 
         <div class='site-header'>
@@ -222,7 +222,7 @@
             </div>
           </div>
         </section>
-        
+
       <footer id='contact'>
         <div class='site-wrapper'>
           <p class='interested'>
