@@ -53,8 +53,7 @@ echo "<tr/>";
 
 $p_sql = "SELECT * FROM package where package_id = '$p_id'";
 $data = mysqli_query($conn, $p_sql);
-$result = mysqli_fetch_assoc($data);   
-$p_amount = $result['package_price'];
+
 
 if(!$data){
         echo("Error description: " . mysqli_error($conn));
@@ -62,6 +61,7 @@ if(!$data){
 
 
   while ($record = mysqli_fetch_array($data)) {
+$p_amount = $record['package_price'];
 
 
 echo "<table border = 1>";
@@ -114,7 +114,7 @@ $n_p_type = $result1['payment_type'];
 
 
 
-    $p_sql = "INSERT INTO payment (billing_id, payment_type_id) VALUES ('$b_id', '$p_type')";
+    $p_sql = "INSERT INTO payment (billing_id, payment_type_id, Balance) VALUES ('$b_id', '$p_type', '$p_amount')";
     $data = mysqli_query($conn, $p_sql);
 
 
