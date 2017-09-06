@@ -46,7 +46,7 @@
               <a href='#contact'>CONTACT</a>
             </li>
             <li>
-              <a href='signup.php'>INQUIRE</a>
+              <a href='signup.php'>PACKAGE</a>
             </li>
             
       

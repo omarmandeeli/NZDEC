@@ -48,6 +48,7 @@ $venue = mysqli_real_escape_string($conn, $_POST['venue']) ;
 date_default_timezone_set('Asia/Manila');
 $date = date('Y/m/d'). substr((string)1, 6);
 $time = date('H:i');
+$avail = "Package";
 
 
   if (empty($e_name) || empty($d_event) || empty($t_event) || empty($e_t_event) || empty($theme)){
@@ -81,7 +82,7 @@ else{
 
 
 
-$sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, venue, reserve_date, reserve_time, package_id) VALUES ('$e_name', '$d_event', '$t_event', '$e_t_event', '$c_id', '$theme', '$venue', '$date', '$time', '$p_id');";
+$sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, venue, reserve_date, reserve_time, package_id, Availed) VALUES ('$e_name', '$d_event', '$t_event', '$e_t_event', '$c_id', '$theme', '$venue', '$date', '$time', '$p_id', '$avail' );";
 $result = mysqli_query ($conn, $sql);
 
 

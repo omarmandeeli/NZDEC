@@ -20,7 +20,8 @@ echo "<th>" . $record['package_name'] . "</th>";
 
 
 echo "</tr>";
-echo "<tr>"; 
+echo "<tr>";
+echo '<td> <img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" /> </td> ';
 echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
 
 echo "<tr/>";

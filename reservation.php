@@ -7,11 +7,10 @@ include 'includes/dbh.inc.php';
 
 
 $c_id = $_SESSION['u_id'];
-$n_id = $_GET['n_id'];
-$p_id = $_GET['new_p_id'];
 
 
-    $sql = "SELECT event_id, event_name, event_date, event_time_start, event_time_end, cusact_id, theme, reserve_date, reserve_time  FROM event_table WHERE cusact_id = $c_id AND event_id=$n_id";
+
+    $sql = "SELECT event_id, event_name, event_date, event_time_start, event_time_end, cusact_id, theme, reserve_date, reserve_time, package_id  FROM event_table WHERE cusact_id = $c_id";
     $data = mysqli_query($conn, $sql);
     
 
@@ -22,7 +21,7 @@ if(!$data){
 
   while ($record = mysqli_fetch_array($data)) {
 
-
+ $p_id = $record['package_id'];
 
 echo "<table border = 1>";
 echo "<tr>";
@@ -51,17 +50,15 @@ echo "<tr/>";
 }
 
 
-$p_sql = "SELECT * FROM package where package_id = '$p_id'";
-$data = mysqli_query($conn, $p_sql);
-$result = mysqli_fetch_assoc($data);   
+$p_sql = "SELECT p.package_name, p.package_price, p.package_details, p.package_categories, p.package_id FROM event_table as e inner join package as p on e.package_id = p.package_id where e.package_id = '$p_id' group by e.package_id";
+$data_p = mysqli_query($conn, $p_sql) ;
+$result = mysqli_fetch_assoc($data_p);
+
 $p_amount = $result['package_price'];
 
-if(!$data){
-        echo("Error description: " . mysqli_error($conn));
-    }
 
 
-  while ($record = mysqli_fetch_array($data)) {
+  while ($record_p = mysqli_fetch_array($data_p)) {
 
 
 echo "<table border = 1>";
@@ -73,10 +70,10 @@ echo "<th>" . "Package Categories" . "</th>";
 
 echo "</tr>";
 echo "<tr>"; 
-echo "<td>" . "<br />" .  $record['package_name'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['package_price'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['package_categories'] . "<br />" . "</td>" ;
+echo "<td>" . "<br />" .  $record_p['package_name'] . "<br />" . "</td>" ;
+echo "<td>" . "<br />" .  $record_p['package_price'] . "<br />" . "</td>" ;
+echo "<td>" . "<br />" .  $record_p['package_details'] . "<br />" . "</td>" ;
+echo "<td>" . "<br />" .  $record_p['package_categories'] . "<br />" . "</td>" ;
 
 echo "<tr/>";
 
@@ -87,6 +84,9 @@ echo "<tr/>";
 }
 echo "</table>";
 
+if(!$data_p){
+        echo("Error description: " . mysqli_error($conn));
+    }
 
 ?>
 

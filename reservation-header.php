@@ -38,30 +38,32 @@
               <a href='inquire.php'>INQUIRE</a>
             </li>
           </ul>
+
+          <?php 
+      if (isset($_SESSION['u_uid'])) {
+
+
+        include 'includes/dbh.inc.php';
+
+        
+
+        echo '<form action="includes/logout.inc.php"    method="POST">
+        <button type="submit" name="submit">logout</button>
+        </form>
+
+
+
+
+        ';
+      } else {
+        header("Location: ../signup.php");
+      }
+      ?>
                </div>
         
       </header>
 
 
-
-<dd>
-
-<div class="container2">  
-  
-    <h3>LogIn</h3>
-    
-    
-        <form id="contact" action="includes/login.inc.php" method="POST">
-          <input type="text" name="uid" placeholder="username/email">
-          <input type="password" name="pwd" placeholder="password">
-          <button type="submit" name="submit">Login</button>
-
-
-
-    </fieldset>
-
-  </form>
-  </div>
 </div>
 
 
