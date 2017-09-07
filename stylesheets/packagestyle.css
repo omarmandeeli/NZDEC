@@ -982,38 +982,54 @@ button:hover {
 
 /**/
 .grid {
-  margin: 0;
-  padding: 0;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  grid-gap: 1px;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%
 }
 
 
 .grid > div{
-  margin: 0;
-  padding: 0;
-  width: 290px;
+  margin: 0 auto;
+  padding: 0 auto;
+  min-width: 25%;
   background-color: #222;
   padding: 1em;
   margin: 1em;
-
+  border: 2px #39d solid;
 }
 
 .grid h1{
-  color: #fff;
+  padding-bottom: 1em;
+  color: #2ca;
+  text-align: left;
+}
+
+.grid img{
+  margin:auto;
+  display: block;
+  border: 2px #39d solid;
 }
 
 .grid ul{
-
+  margin: 0 auto;
+  text-align: left;
 }
 
 .grid li{
-  margin: 0;
-  padding: 0;
-  color: #257;
+  margin: 0 auto;
+  padding: 0 auto;
+  padding-bottom: 1em;
+  color: #39d;
+  display: inline-block;
+  vertical-align: top;
 }
 
+.gridcontainer {
+  width: 80%;
+  margin: auto;
+}
 /**/
 
 input[type="submit"]{

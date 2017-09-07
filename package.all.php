@@ -18,7 +18,7 @@ echo "<div>";
 echo "<h1>";
 echo "<p>" . $record['package_name'] . "</p>";
 echo "</h1>";
-
+echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
 echo "<ul>";
 echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
 echo "<ul/>";
@@ -121,10 +121,6 @@ $order_n_id = mysqli_insert_id($conn);
 
 }
 }
- else {
-
-
-}
 
 
 
@@ -134,21 +130,6 @@ $order_n_id = mysqli_insert_id($conn);
 
 
 
-               <?php
-      if (isset($_SESSION['u_uid'])) {
-
-
-        echo '<form action="includes/logout.inc.php"    method="POST">
-        <button type="submit" name="submit">logout</button>
-        </form>
-
-        ';
-      } else {
-        // echo '<form action="Login.php"><button type="submit" name="submit">
-        // Login</button> </form>
-        // <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
-      }
-      ?>
           </ul>
           <span class='follow'>
             <a class='links' href='#' target='_blank' title='Twitter'>
