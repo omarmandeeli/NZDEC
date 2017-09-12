@@ -9,6 +9,7 @@ mysqli_select_db($conn, "test");
 $sql = "SELECT * FROM package";
 $data = mysqli_query($conn, $sql);
 
+<<<<<<< HEAD
 echo "<div class='grid'>";
     while ($record = mysqli_fetch_array($data)) {
       $id = $record['package_id'];
@@ -22,6 +23,28 @@ echo "<div class='grid'>";
       echo "</div>";
     }
   echo "</div>";
+=======
+
+echo "<div class='grid'>";
+while ($record = mysqli_fetch_array($data)) {
+$id = $record['package_id'];
+
+echo "<div>";
+echo "<h1>";
+echo "<p>" . $record['package_name'] . "</p>";
+echo "</h1>";
+echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
+echo "<ul>";
+echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
+echo "<ul/>";
+
+echo  "<td><a href='package.all.php?id=$id'>Submit</a></td>";
+echo "</div>";
+
+}
+echo "</div>";
+
+>>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
 if (isset($_POST['submit'])) {
 
 
@@ -54,7 +77,7 @@ $avail = "Package";
 
  if(!$result){
         echo("Error description: " . mysqli_error($conn));
-    
+
 }
 
     if ($resultcheck>=1) {
@@ -114,10 +137,6 @@ $order_n_id = mysqli_insert_id($conn);
 
 }
 }
- else {
-
- 
-}
 
 
 
@@ -127,27 +146,12 @@ $order_n_id = mysqli_insert_id($conn);
 
 
 
-               <?php 
-      if (isset($_SESSION['u_uid'])) {
-
-
-        echo '<form action="includes/logout.inc.php"    method="POST">
-        <button type="submit" name="submit">logout</button>
-        </form>
-
-        ';
-      } else {
-        echo '<form action="Login.php"><button type="submit" name="submit">
-        Login</button> </form>
-        <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
-      }
-      ?>
           </ul>
           <span class='follow'>
             <a class='links' href='#' target='_blank' title='Twitter'>
               <i class='fa fa-twitter'></i>
             </a>
-            
+
             <a class='links' href='#' target='_blank' title='Youtube'>
               <i class='fa fa-facebook'></i>
             </a>
@@ -188,9 +192,9 @@ $order_n_id = mysqli_insert_id($conn);
 <input name="submit" type="submit" value="Submit"/>
 </form>
 
-      
+
       <footer id='contacts'>
-        
+
         <span class='cc'>
           @ 2014 . Zaldy Ducusin
         </span>
@@ -203,5 +207,5 @@ $order_n_id = mysqli_insert_id($conn);
     <script src="javascripts/libs/holder.js" type="text/javascript"></script>
     <script src="javascripts/plugins.js" type="text/javascript"></script>
     <script src="javascripts/formsjs.js" type="text/javascript"></script>
-  
+
 </html>

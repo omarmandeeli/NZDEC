@@ -12,16 +12,16 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <title>Zaldy Ducusin Events And Consultancy</title>
 
-    
+
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
-    
+
       <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    
+
   </head>
   <body class='homepage'>
     <!--[if lt IE 8]>
@@ -46,12 +46,23 @@
             <li>
               <a href='#contact'>CONTACT</a>
             </li>
+<<<<<<< HEAD
       
    
           <?php 
 
  
 
+=======
+            <li>
+              <a href='signup.php'>PACKAGE</a>
+            </li>
+
+
+
+
+          <?php
+>>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
       if (isset($_SESSION['u_uid'])) {
 
 
@@ -62,12 +73,15 @@ $sql = "SELECT * FROM customer_table where cusact_id = '$c_id'";
 $data = mysqli_query($conn, $sql);
 
 
+<<<<<<< HEAD
     while ($record = mysqli_fetch_array($data)) {
 
       $c_name = $record['cus_fname'];
 
     }
         
+=======
+>>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
 
         echo '
            <li>
@@ -101,10 +115,10 @@ $data = mysqli_query($conn, $sql);
       }
     
       ?>
-          
+
         </div>
 
-   
+
 
 
         <div class='site-header'>
@@ -243,7 +257,7 @@ $data = mysqli_query($conn, $sql);
             </div>
           </div>
         </section>
-        
+
       <footer id='contact'>
         <div class='site-wrapper'>
           <p class='interested'>

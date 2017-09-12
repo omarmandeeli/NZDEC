@@ -549,6 +549,8 @@ footer {
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 
+
+
 }
 .form-style-5 fieldset{
     border: none;
@@ -605,6 +607,7 @@ footer {
 .form-style-5 select:focus{
     background: #d2d9dd;
 }
+
 .form-style-5 select{
     -webkit-appearance: menulist-button;
     height:35px;
@@ -659,6 +662,7 @@ footer {
 {
     background: #214a6d;
 }
+
 
 footer {
   position: relative;
@@ -1002,8 +1006,13 @@ button:hover {
 
 .grid h1{
   padding-bottom: 1em;
+<<<<<<< HEAD
   color: #2ca;
   text-align: left;
+=======
+  color: #fff;
+  text-align: center;
+>>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
 }
 
 .grid img{
@@ -1073,3 +1082,7 @@ cursor: pointer;
   justify-content: center;
   border-bottom: none;;
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
