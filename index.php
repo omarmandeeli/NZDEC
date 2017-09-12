@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -45,40 +46,60 @@
             <li>
               <a href='#contact'>CONTACT</a>
             </li>
-            <li>
-              <a href='signup.php'>PACKAGE</a>
-            </li>
-            
       
    
-   
           <?php 
+
+ 
+
       if (isset($_SESSION['u_uid'])) {
 
 
         include 'includes/dbh.inc.php';
+$c_id = $_SESSION['u_id'];
+mysqli_select_db($conn, "test");
+$sql = "SELECT * FROM customer_table where cusact_id = '$c_id'";
+$data = mysqli_query($conn, $sql);
 
+
+    while ($record = mysqli_fetch_array($data)) {
+
+      $c_name = $record['cus_fname'];
+
+    }
         
 
-        echo '<form action="includes/logout.inc.php"    method="POST">
+        echo '
+           <li>
+              <a href='.'Packages.php'.'>INQUIRE NOW</a>
+            </li>
+             <li>
+              <a href='.'reservation.php'.'>RESERVATIONS</a>
+            </li>
+        <form action="includes/logout.inc.php"    method="POST">
+      
         <button type="submit" name="submit">logout</button>
-        </form>
-        <form action="includes/inquire.inc.php"    method="POST">
-        <button type="submit" name="submit">Inquire</button>
-        </form>
-        <form action="includes/reservation.inc.php"    method="POST">
-        <button type="submit" name="submit">Reservations</button>
-        </form>
-
-
-
-
         ';
+        echo '<form> ';
+
+        echo '<h1> Hello, ';
+        echo $c_name;
+        echo '</h1>';
+
+
+        echo '</form>';
       } else {
-        echo '<form action="login.php"><button type="submit" name="submit">
+        echo '
+
+          <li>
+              <a href='.'package-view.php.'.'>PACKAGE</a>
+            </li>
+   
+        <form action="login.php"><button type="submit" name="submit">
         Login</button> </form>
         <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
       }
+    
       ?>
           
         </div>

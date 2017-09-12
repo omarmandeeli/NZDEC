@@ -10,30 +10,19 @@ $sql = "SELECT * FROM package";
 $data = mysqli_query($conn, $sql);
 
 
-while ($record = mysqli_fetch_array($data)) {
-
-$id = $record['package_id'];
-
-echo "<table border = 1>";
-echo "<tr>";
-echo "<th>" . $record['package_name'] . "</th>";
-
-
-echo "</tr>";
-echo "<tr>";
-echo '<td> <img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" /> </td> ';
-echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
-
-echo "<tr/>";
-
-echo  "<td><a  href='package.all.php?id=$id'>Submit</a></td>";
-
-
-
-}
-
-echo "</table>";
-
+echo "<div class='grid'>";
+    while ($record = mysqli_fetch_array($data)) {
+      $id = $record['package_id'];
+      echo "<div>";
+          echo "<h1>" . $record['package_name'] . "</h1>";
+        echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
+        echo "<ul>";
+        echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
+        echo "<ul/>";
+        echo  "<a href='package.all.php?id=$id'>Submit</a>";
+      echo "</div>";
+    }
+  echo "</div>";
 if (isset($_POST['submit'])) {
 
 include 'dbh.inc.php';
@@ -64,7 +53,6 @@ mysqli_query($conn, $sql);
 }
  else {
 
-	echo 'isset was false'; 
 	
 
 }

@@ -9,30 +9,19 @@ mysqli_select_db($conn, "test");
 $sql = "SELECT * FROM package";
 $data = mysqli_query($conn, $sql);
 
+echo "<div class='grid'>";
+    while ($record = mysqli_fetch_array($data)) {
+      $id = $record['package_id'];
+      echo "<div>";
+          echo "<h1>" . $record['package_name'] . "</h1>";
+       
+        echo "<ul>";
 
-while ($record = mysqli_fetch_array($data)) {
-
-$id = $record['package_id'];
-
-echo "<table border = 1>";
-echo "<tr>";
-echo "<th>" . $record['package_name'] . "</th>";
-
-
-echo "</tr>";
-echo "<tr>"; 
-echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
-
-echo "<tr/>";
-
-echo  "<td><a  href='package.all.php?id=$id'>Submit</a></td>";
-
-
-
-}
-
-echo "</table>";
-
+        echo "<ul/>";
+        echo  "<a href='package.all.php?id=$id'>Submit</a>";
+      echo "</div>";
+    }
+  echo "</div>";
 if (isset($_POST['submit'])) {
 
 
@@ -69,7 +58,7 @@ $avail = "Package";
 }
 
     if ($resultcheck>=1) {
-      header("Location:../Packages.all..overload.php?input=datescheduled");
+      header("Location:../Packages.all.php?input=datescheduled");
   exit();
     }
 

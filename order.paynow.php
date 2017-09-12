@@ -1,14 +1,14 @@
 <?php
  session_start();
 
-  include_once 'order.confirmation-header.php';
+  include_once 'order.paynow-header.php';
 
   include 'includes/dbh.inc.php';
 
 
 $c_id = $_SESSION['u_id'];
-$n_id = $_GET['n_id'];
-$p_id = $_GET['new_p_id'];
+$n_id = $_GET['id'];
+$p_id = $_GET['p_id'];
 
 
     $sql = "SELECT event_id, event_name, event_date, event_time_start, event_time_end, cusact_id, theme, reserve_date, reserve_time  FROM event_table WHERE cusact_id = $c_id AND event_id=$n_id";
@@ -161,7 +161,7 @@ header("Location:reservation.php");
 
     <input type='radio' name='p_type' value='2'/>Full Payment</br>
     <input type='radio' name='p_type' value='1'/>Installment</br>
-   
+    <input type='radio' name='p_type' value='3'/>Balance</br>
     <input type="file" name="image" id="image">
     <input type="text" name="amount" placeholder="Amount">
     <input type="text" name="acc-num" placeholder="Reference Number">

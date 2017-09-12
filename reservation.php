@@ -8,56 +8,20 @@ include 'includes/dbh.inc.php';
 
 $c_id = $_SESSION['u_id'];
 
-/*
-
-    $sql = "SELECT event_id, event_name, event_date, event_time_start, event_time_end, cusact_id, theme, reserve_date, reserve_time, package_id  FROM event_table WHERE ";
-    $data = mysqli_query($conn, $sql);
-    
-
-if(!$data){
-        echo("Error description: " . mysqli_error($conn));
-    }
 
 
-  while ($record = mysqli_fetch_array($data)) {
-
- $p_id = $record['package_id'];
-
-echo "<table border = 1>";
-echo "<tr>";
-echo "<th>" . "Name of The Event" ."</th>";
-echo "<th>" . "Date of the Event" ."</th>";
-echo "<th>" . "Time of the Event" ."</th>";
-echo "<th>" . "End Time of the Event" ."</th>";
-echo "<th>" . "Theme" ."</th>";
-echo "<th>" . "Reserve Date" ."</th>";
-echo "<th>" . "Reserve Time" ."</th>";
-
-echo "</tr>";
-echo "<tr>"; 
-echo "<td>" . "<br />" .  $record['event_name'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['event_date'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['event_time_start'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['event_time_end'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['theme'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['reserve_date'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record['reserve_time'] . "<br />" . "</td>" ;
-
-echo "<tr/>";
-
-
-
-}
-*/
-
-$p_sql = "SELECT p.package_name, p.package_price, p.package_details, p.package_categories, p.package_id, e.event_name, e.event_date, e.event_time_start, e.event_time_end, e.theme, e.reserve_date, e.reserve_time FROM event_table as e inner join package as p on e.package_id = p.package_id where cusact_id = $c_id";
+$p_sql = "SELECT p.package_id, p.package_name, p.package_price, p.package_details, p.package_categories, p.package_id, e.event_id, e.event_name, e.event_date, e.event_time_start, e.event_time_end, e.theme, e.reserve_date, e.reserve_time FROM event_table as e inner join package as p on e.package_id = p.package_id where cusact_id = $c_id";
 $data_p = mysqli_query($conn, $p_sql) ;
+
+
 
 
 
 
   while ($record_p = mysqli_fetch_array($data_p)) {
 
+$e_id = $record_p ['event_id'];
+$p_id = $record_p ['package_id'];
 
 echo "<table border = 1>";
 echo "<tr>";
@@ -91,7 +55,7 @@ echo "<tr/>";
 
 
 
-
+echo  "<a href='order.paynow.php?id=$e_id&p_id=$p_id'>Submit</a>";
 
 }
 echo "</table>";
