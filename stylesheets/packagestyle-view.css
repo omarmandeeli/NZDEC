@@ -986,44 +986,73 @@ button:hover {
   padding: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%
+  width: 100%;
 }
 
 
 .grid > div{
-  margin: 0 auto;
-  padding: 0 auto;
   min-width: 25%;
   background-color: #222;
   padding: 1em;
   margin: 1em;
   border: 2px #39d solid;
+  border-radius: 1em;
 }
 
 .grid h1{
+    box-sizing: border-box;
   padding-bottom: 1em;
-  color: #2ca;
-  text-align: left;
+  color: #fff;
+  text-align: center;
 }
 
 .grid img{
+    box-sizing: border-box;
   margin:auto;
   display: block;
   border: 2px #39d solid;
 }
 
 .grid ul{
-  margin: 0 auto;
-  text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: 2em;
+    text-align: left;
 }
 
 .grid li{
+    box-sizing: border-box;
+    font: normal 18px Arial, Helvetica, sans-serif;
   margin: 0 auto;
+  margin-left: 18px;
   padding: 0 auto;
-  padding-bottom: 1em;
-  color: #39d;
+  padding-bottom: 18px;
+  color: #f3f3f3;
   display: inline-block;
   vertical-align: top;
+}
+
+.grid a{
+    display: block;
+    vertical-align: bottom;
+    padding: 7px;
+    color: #fff;
+    background: #257;
+    font: normal 18px Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 35%;
+    border: none;
+    border-width: 0;
+    box-sizing: border-box;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.grid a:hover
+{
+    background: #2ca;
+    -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
 }
 
 .gridcontainer {
@@ -1032,18 +1061,36 @@ button:hover {
 }
 /**/
 
-input[type="submit"]{
-cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #1abc9c;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
-  align-items: center;
-  justify-content: center;
-  border-bottom: none;;
+.buttonwrap{
+    width: 100%;
+    margin: auto;
+text-align: center;
+}
+
+.packbuttinquire input[type="submit"]{
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+    display: inline;
+    border: none;
+    background: #257;
+    background-position: center;
+    color: #FFF;
+    margin: 3em 3em 5em 3em;
+    padding: 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.packbuttinquire input[type="submit"]:hover
+{
+  background: #2ca;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
 
 }
 
@@ -1071,5 +1118,4 @@ cursor: pointer;
   font-size: 15px;
   align-items: center;
   justify-content: center;
-  border-bottom: none;;
-
+  border-bottom: none;

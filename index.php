@@ -46,23 +46,13 @@
             <li>
               <a href='#contact'>CONTACT</a>
             </li>
-<<<<<<< HEAD
-      
-   
-          <?php 
 
- 
-
-=======
-            <li>
-              <a href='signup.php'>PACKAGE</a>
-            </li>
 
 
 
 
           <?php
->>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
+
       if (isset($_SESSION['u_uid'])) {
 
 
@@ -73,15 +63,12 @@ $sql = "SELECT * FROM customer_table where cusact_id = '$c_id'";
 $data = mysqli_query($conn, $sql);
 
 
-<<<<<<< HEAD
+
     while ($record = mysqli_fetch_array($data)) {
 
       $c_name = $record['cus_fname'];
 
     }
-        
-=======
->>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
 
         echo '
            <li>
@@ -90,32 +77,32 @@ $data = mysqli_query($conn, $sql);
              <li>
               <a href='.'reservation.php'.'>RESERVATIONS</a>
             </li>
+
         <form action="includes/logout.inc.php"    method="POST">
-      
-        <button type="submit" name="submit">logout</button>
-        ';
+        <button type="submit" name="submit">logout</button>        ';
+
         echo '<form> ';
-
-        echo '<h1> Hello, ';
-        echo $c_name;
-        echo '</h1>';
-
-
+            echo '<h1> Hello, ';
+            echo $c_name;
+            echo '</h1>';
         echo '</form>';
+
       } else {
-        echo '
 
-          <li>
-              <a href='.'package-view.php.'.'>PACKAGE</a>
-            </li>
-   
-        <form action="login.php"><button type="submit" name="submit">
-        Login</button> </form>
-        <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
+            echo '
+                <li>
+                    <a href='.'package-view.php.'.'>PACKAGE</a>
+                </li>';
+
+                echo '<form action="login.php">';
+                echo '<button type="submit" name="submit">Login</button>';
+                echo '</form>';
+                    echo '<form action="signup.php">';
+                        echo '<button type="submit" name="signup">Signup</button>';
+                    echo '</form>';
       }
-    
-      ?>
 
+      ?>
         </div>
 
 
