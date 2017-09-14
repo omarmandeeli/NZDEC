@@ -9,7 +9,7 @@ mysqli_select_db($conn, "test");
 $sql = "SELECT * FROM package";
 $data = mysqli_query($conn, $sql);
 
-<<<<<<< HEAD
+
 echo "<div class='grid'>";
     while ($record = mysqli_fetch_array($data)) {
       $id = $record['package_id'];
@@ -23,28 +23,28 @@ echo "<div class='grid'>";
       echo "</div>";
     }
   echo "</div>";
-=======
 
-echo "<div class='grid'>";
-while ($record = mysqli_fetch_array($data)) {
-$id = $record['package_id'];
 
-echo "<div>";
-echo "<h1>";
-echo "<p>" . $record['package_name'] . "</p>";
-echo "</h1>";
-echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
-echo "<ul>";
-echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
-echo "<ul/>";
+// echo "<div class='grid'>";
+// while ($record = mysqli_fetch_array($data)) {
+// $id = $record['package_id'];
 
-echo  "<td><a href='package.all.php?id=$id'>Submit</a></td>";
-echo "</div>";
+// echo "<div>";
+// echo "<h1>";
+// echo "<p>" . $record['package_name'] . "</p>";
+// echo "</h1>";
+// echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
+// echo "<ul>";
+// echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
+// echo "<ul/>";
 
-}
-echo "</div>";
+// echo  "<td><a href='package.all.php?id=$id'>Submit</a></td>";
+// echo "</div>";
 
->>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
+// }
+// echo "</div>";
+
+
 if (isset($_POST['submit'])) {
 
 
@@ -61,6 +61,7 @@ date_default_timezone_set('Asia/Manila');
 $date = date('Y/m/d'). substr((string)1, 6);
 $time = date('H:i');
 $avail = "Package";
+$my_date = date('Y-m-d', strtotime($d_event));
 
 
   if (empty($e_name) || empty($d_event) || empty($t_event) || empty($e_t_event) || empty($theme)){
@@ -94,7 +95,7 @@ else{
 
 
 
-$sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, venue, reserve_date, reserve_time, package_id, Availed) VALUES ('$e_name', '$d_event', '$t_event', '$e_t_event', '$c_id', '$theme', '$venue', '$date', '$time', '$p_id', '$avail' );";
+$sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, venue, reserve_date, reserve_time, package_id, Availed) VALUES ('$e_name', '$my_date', '$t_event', '$e_t_event', '$c_id', '$theme', '$venue', '$date', '$time', '$p_id', '$avail' );";
 $result = mysqli_query ($conn, $sql);
 
 
@@ -165,6 +166,8 @@ $order_n_id = mysqli_insert_id($conn);
 
 
       </header>
+  
+
 
 <div class="form-style-5">
 
@@ -173,8 +176,11 @@ $order_n_id = mysqli_insert_id($conn);
 <label>Event Name</label>
 <input type="text" name="e_name" placeholder="Enter Event Name*"/>
 
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <label for="job">Day of the Event</label>
-<input type="date" name="d_event" placeholder="Enter Date of Event*"/>
+<input type="text" name="d_event" id="mydate" size="30" data-date-format='yy-mm-dd' />
 
 
 <label for="job">Time of the Event</label>
@@ -190,6 +196,71 @@ $order_n_id = mysqli_insert_id($conn);
 <input type="text" name="venue" placeholder="Enter Venue*"/>
 
 <input name="submit" type="submit" value="Submit"/>
+
+<style type="text/css">
+
+.ui-datepicker-calendar>tbody>tr>td.ui-datepicker-unselectable>span.ui-state-default:before{
+    bottom: 0;
+    content: "X";
+    height: 10px;
+    color: red;
+    left: 7px;
+    margin: auto;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 4px;
+}
+
+
+</style>
+
+
+<?php  
+$query = " SELECT  * FROM event_table ";
+$result = mysqli_query($conn,$query);
+$sentToList = array();
+while($row = mysqli_fetch_assoc($result)) { 
+
+  $sentToList[] = $row['event_date'];
+
+   }
+$json = json_encode($sentToList);
+
+?>
+
+<script >
+
+
+
+
+
+var dateToday = new Date(); 
+$(function() {
+
+  
+
+
+
+
+var array = <?php print_r($json) ?>
+
+$('#mydate').datepicker({
+     
+    beforeShowDay: function(date){
+        
+        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+        return [ array.indexOf(string) == -1 ]
+
+    }
+ 
+});
+
+});
+
+
+</script>
+
 </form>
 
 
@@ -200,12 +271,6 @@ $order_n_id = mysqli_insert_id($conn);
         </span>
       </footer>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script>
-      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
-    </script>
-    <script src="javascripts/libs/holder.js" type="text/javascript"></script>
-    <script src="javascripts/plugins.js" type="text/javascript"></script>
-    <script src="javascripts/formsjs.js" type="text/javascript"></script>
+
 
 </html>

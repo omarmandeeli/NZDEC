@@ -46,23 +46,11 @@
             <li>
               <a href='#contact'>CONTACT</a>
             </li>
-<<<<<<< HEAD
-      
-   
-          <?php 
-
- 
-
-=======
-            <li>
-              <a href='signup.php'>PACKAGE</a>
-            </li>
-
 
 
 
           <?php
->>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
+
       if (isset($_SESSION['u_uid'])) {
 
 
@@ -73,15 +61,12 @@ $sql = "SELECT * FROM customer_table where cusact_id = '$c_id'";
 $data = mysqli_query($conn, $sql);
 
 
-<<<<<<< HEAD
     while ($record = mysqli_fetch_array($data)) {
 
       $c_name = $record['cus_fname'];
 
     }
         
-=======
->>>>>>> c8594cc0751dd224ddb831134cf94685825f8591
 
         echo '
            <li>
@@ -89,6 +74,9 @@ $data = mysqli_query($conn, $sql);
             </li>
              <li>
               <a href='.'reservation.php'.'>RESERVATIONS</a>
+            </li>
+            <li>
+              <a href='.'cart-index.php'.'>CUSTOMIZE</a>
             </li>
         <form action="includes/logout.inc.php"    method="POST">
       
@@ -106,7 +94,7 @@ $data = mysqli_query($conn, $sql);
         echo '
 
           <li>
-              <a href='.'package-view.php.'.'>PACKAGE</a>
+              <a href='.'package-view.php'.'>PACKAGE</a>
             </li>
    
         <form action="login.php"><button type="submit" name="submit">

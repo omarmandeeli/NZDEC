@@ -62,7 +62,7 @@ if(!$data){
 
   while ($record = mysqli_fetch_array($data)) {
 $p_amount = $record['package_price'];
-
+$percentage = 12;
 
 echo "<table border = 1>";
 echo "<tr>";
@@ -79,6 +79,7 @@ echo "<td>" . "<br />" .  $record['package_details'] . "<br />" . "</td>" ;
 echo "<td>" . "<br />" .  $record['package_categories'] . "<br />" . "</td>" ;
 
 echo "<tr/>";
+
 
 
 

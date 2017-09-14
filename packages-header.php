@@ -15,11 +15,8 @@
     <link href="stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
     
     <link href="stylesheets/packagestyle.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    <style>
-
-</style>
-  </head>
+   
+    </head>
   <body class='homepage'>
    
 
