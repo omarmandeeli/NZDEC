@@ -16,7 +16,7 @@ echo "<div class='grid'>";
           echo "<h1>" . $record['package_name'] . "</h1>";
         echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
         echo "<ul>";
-        echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
+        echo nl2br("<li>" . "<br />" .  $record['package_details']. "</li>") ;
         echo "<ul/>";
         echo  "<a href='package.all.php?id=$id'>Submit</a>";
       echo "</div>";
@@ -41,7 +41,7 @@ $date = date('Y-m-d H:i:s');
 		exit();
 	}else{
 
- 
+
 
 
 $sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, reserve_date_time) VALUES ('$e_name', '$d_event', '$t_event', '$e_t_event', '$c_id', '$theme', '$date');";
@@ -52,7 +52,7 @@ mysqli_query($conn, $sql);
 }
  else {
 
-	
+
 
 }
 
@@ -98,8 +98,8 @@ mysqli_query($conn, $sql);
 
 ?>
 
-<div class="form-style-5">
-
+<!-- <div class="form-style-5"> -->
+<div class="formstyle1">
   <form method="POST">
     <label>Event Name</label>
     <input type="text" name="e_name" placeholder="Enter Event Name*"/>
@@ -115,6 +115,7 @@ mysqli_query($conn, $sql);
     <input type="text" name="venue" placeholder="Enter Venue*"/>
     <input name="submit" type="submit" value="Submit"/>
   </form>
+</div>
 
   <footer id='contacts'>
     <span class='cc'>
@@ -122,7 +123,7 @@ mysqli_query($conn, $sql);
     </span>
   </footer>
 
-</div>
+<!-- </div> -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script>
