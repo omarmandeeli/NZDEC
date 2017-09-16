@@ -992,13 +992,13 @@ button:hover {
   background-color: #f3f3f3;
   margin: 1em;
   border: 2px #39d solid;
-  border-radius: 1em;
   padding: 1em;
   box-sizing: border-box;
 }
 
 .grid h1{
     box-sizing: border-box;
+    font-weight: bold;
     padding: 1em 0 1em 0;
     color: #000;
     text-align: center;
@@ -1027,8 +1027,7 @@ button:hover {
   margin-left: 18px;
   padding: 0 auto;
   padding-bottom: 18px;
-  color: #000;
-  
+  color: #777;
 }
 
 .grid a{
