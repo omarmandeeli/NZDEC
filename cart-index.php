@@ -1,24 +1,35 @@
 <?php   
- session_start();  
- $connect = mysqli_connect("localhost", "root", "", "test");  
+ session_start();
+
+
+
+include 'includes/dbh.inc.php';
+
+
+if (!$conn) {
+    die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
+}
+
+ 
+ $n_id = $_GET['n_id'];
+ $_SESSION['n_id'] = $n_id;
+ $p_id = $_GET['new_p_id'];
+ $_SESSION['p_id'] = $p_id;
+
+                                    
  ?>  
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>CUSTOMIZE YOUR EVENT</title>  
+           <title>Webslesson Tutorial | Multi Tab Shopping Cart By Using PHP Ajax Jquery Bootstrap Mysql</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-
       </head>  
-
-      
       <body>  
            <br />  
-          
-           </div>  
-      </body>   <div class="container" style="width:800px;">  
-                <h3 align="center">Customize your Event</h3><br />  
+           <div class="container" style="width:800px;">  
+                <h3 align="center">SERVICES</h3><br />  
                 <ul class="nav nav-tabs">  
                      <li class="active"><a data-toggle="tab" href="#products">Product</a></li>  
                      <li><a data-toggle="tab" href="#cart">Cart <span class="badge"><?php if(isset($_SESSION["shopping_cart"])) { echo count($_SESSION["shopping_cart"]); } else { echo '0';}?></span></a></li>  
@@ -27,13 +38,13 @@
                      <div id="products" class="tab-pane fade in active">  
                      <?php  
                      $query = "SELECT * FROM service ORDER BY service_id ASC";  
-                     $result = mysqli_query($connect, $query);  
+                     $result = mysqli_query($conn, $query);  
                      while($row = mysqli_fetch_array($result))  
                      {  
                      ?>  
                      <div class="col-md-4" style="margin-top:12px;">  
                           <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height:350px;" align="center">  
-                               <img src="images/<?php echo $row["service_image"]; ?>" class="img-responsive" /><br />  
+                               <!-- <img src="images/"<?php echo $row["service_image"]; ?>" class="img-responsive" /><br />  --> 
                                <h4 class="text-info"><?php echo $row["service_name"]; ?></h4>  
                                <h4 class="text-danger">$ <?php echo $row["service_price"]; ?></h4>  
                                <input type="text" name="quantity" id="quantity<?php echo $row["service_id"]; ?>" class="form-control" value="1" />  
@@ -79,8 +90,9 @@
                                          <td></td>  
                                     </tr>  
                                     <tr>  
+
                                          <td colspan="5" align="center">  
-                                              <form method="post" action="cart.php">  
+                                              <form method="post" action="cart.php?n_id=$n_id&p_id=$p_id">  
                                                    <input type="submit" name="place_order" class="btn btn-warning" value="Place Order" />  
                                               </form>  
                                          </td>  
@@ -92,6 +104,8 @@
                           </div>  
                      </div>  
                 </div>  
+           </div>  
+      </body>  
  </html>  
  <script>  
  $(document).ready(function(data){  

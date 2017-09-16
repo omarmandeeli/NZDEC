@@ -2,57 +2,22 @@
  session_start();  
  $connect = mysqli_connect("localhost", "root", "", "test");  
  ?>  
-<html class='no-js'>
-
-  <head>
-
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-
-
-      <title>CUSTOMIZE YOUR EVENT</title>  
+ <!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>CUSTOMIZE YOUR EVENT</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
 
+      </head>  
 
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-
-    <link href="stylesheets/loginstyle.css" media="screen" rel="stylesheet" type="text/css" />
-    
-    <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    
-  </head>
-  <body class='homepage'>
-   
-    <div class='container'>
-      <header id='header' class="fixed-top">
-   
-        <div class='site-main-menu' id='menu'>
-          <ul>
-            <li>
-              <a href='index.php'>HOME</a>
-            </li>
-            <li>
-              <a href='index.php'>ABOUT US</a>
-            </li>
-            <li>
-              <a href='index.php'>PROJECTS</a>
-            </li>
-            <li>
-              <a href='index.php'>CONTACT</a>
-            </li>
-            <li>
-              <a href='inquire.php'>INQUIRE</a>
-            </li>
-          </ul>
-               </div>
-        
-      </header>
-
-
-
- <div class="container" style="width:800px;">  
+      
+      <body>  
+           <br />  
+          
+           </div>  
+      </body>   <div class="container" style="width:800px;">  
                 <h3 align="center">Customize your Event</h3><br />  
                 <ul class="nav nav-tabs">  
                      <li class="active"><a data-toggle="tab" href="#products">Product</a></li>  
@@ -127,20 +92,8 @@
                           </div>  
                      </div>  
                 </div>  
-
-
-
- 
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script>
-      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')
-
-    <script src="javascripts/libs/holder.js" type="text/javascript"></script>
-    <script src="javascripts/plugins.js" type="text/javascript"></script>
-    <script src="javascripts/formsjs.js" type="text/javascript"></script>
-  </body>
-  <script>  
+ </html>  
+ <script>  
  $(document).ready(function(data){  
       $('.add_to_cart').click(function(){  
            var product_id = $(this).attr("id");  
@@ -215,5 +168,3 @@
  });  
  </script>
 
-
-</html>

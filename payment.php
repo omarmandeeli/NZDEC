@@ -39,7 +39,9 @@
             <li>
               <a href='index.php'>CONTACT</a>
             </li>
-       w
+            <li>
+              <a href='index.php'>INQUIRE</a>
+            </li>
           </ul>
           <span class='follow'>
             <a class='links' href='#' target='_blank' title='Twitter'>

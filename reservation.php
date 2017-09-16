@@ -1,9 +1,15 @@
+
+
+
 <?php
  session_start();
 
  include_once 'reservation-header.php';
 
 include 'includes/dbh.inc.php';
+
+
+
 
 
 $c_id = $_SESSION['u_id'];
@@ -23,7 +29,7 @@ $data_p = mysqli_query($conn, $p_sql) ;
 $e_id = $record_p ['event_id'];
 $p_id = $record_p ['package_id'];
 
-echo "<table border = 1>";
+echo "<table class = ". "rwd-table" . "border = 1>";
 echo "<tr>";
 echo "<th>" . "Package Name" . "</th>";
 echo "<th>" . "Package Price" . "</th>";

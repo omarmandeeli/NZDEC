@@ -75,9 +75,6 @@ $data = mysqli_query($conn, $sql);
              <li>
               <a href='.'reservation.php'.'>RESERVATIONS</a>
             </li>
-            <li>
-              <a href='.'cart-index.php'.'>CUSTOMIZE</a>
-            </li>
         <form action="includes/logout.inc.php"    method="POST">
       
         <button type="submit" name="submit">logout</button>

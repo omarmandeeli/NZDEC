@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html class='no-js'>
 
   <head>
@@ -10,8 +12,10 @@
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 
-    <link href="stylesheets/reservecss.css" media="screen" rel="stylesheet" type="text/css" />
-    
+    <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
+  
+    <link href="stylesheets/order-confirmation.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
     
   </head>
@@ -34,9 +38,14 @@
             <li>
               <a href='index.php'>CONTACT</a>
             </li>
-        
+            <li>
+              <a href='index.php'>INQUIRE</a>
+            </li>
 
-          <?php 
+
+
+          </ul>
+               <?php 
       if (isset($_SESSION['u_uid'])) {
 
 
@@ -56,13 +65,7 @@
         header("Location: ../signup.php");
       }
       ?>
-               </div>
+
+        </div>
         
       </header>
-
-
-</div>
-
-
- 
-

@@ -120,11 +120,7 @@ $price = mysqli_fetch_assoc($p_result);
 $p_p = $price['package_price'];
 
 
-$sql = "INSERT INTO order_list (order_qnty, event_id, amount) VALUES ('$order_q', '$newest_id', '$p_p');";
-$result = mysqli_query ($conn, $sql);
-$order_n_id = mysqli_insert_id($conn);
-
- header("Location:order.confirmation.php?n_id=$newest_id&new_p_id=$p_id&o_id=$order_n_id");
+ header("Location:order.confirmation.php?n_id=$newest_id&new_p_id=$p_id");
 
 
 
@@ -138,6 +134,104 @@ $order_n_id = mysqli_insert_id($conn);
 
 }
 }
+
+
+
+
+//----------------------------------------------------------------------------------------------------------//
+
+
+if (isset($_POST['submit-addon'])) {
+
+
+
+$p_id = $_GET['id'];
+$c_id = $_SESSION['u_id'];
+$e_name = mysqli_real_escape_string($conn, $_POST['e_name']) ;
+$d_event = mysqli_real_escape_string($conn, $_POST['d_event']) ;
+$t_event = mysqli_real_escape_string($conn, $_POST['t_event']) ;
+$e_t_event = mysqli_real_escape_string($conn, $_POST['e_t_event']) ;
+$theme = mysqli_real_escape_string($conn, $_POST['theme']) ;
+$venue = mysqli_real_escape_string($conn, $_POST['venue']) ;
+date_default_timezone_set('Asia/Manila');
+$date = date('Y/m/d'). substr((string)1, 6);
+$time = date('H:i');
+$avail = "Package";
+$my_date = date('Y-m-d', strtotime($d_event));
+
+
+  if (empty($e_name) || empty($d_event) || empty($t_event) || empty($e_t_event) || empty($theme)){
+
+    header("Location:../Packages.all.php?empty");
+    exit();
+  }
+
+  else{
+    $sql = "SELECT * FROM event_table WHERE event_date = '$d_event'" ;
+    $result = mysqli_query($conn, $sql);
+    $resultcheck = mysqli_num_rows($result);
+
+
+ if(!$result){
+        echo("Error description: " . mysqli_error($conn));
+
+}
+
+    if ($resultcheck>=1) {
+      header("Location:../Packages.all.php?input=datescheduled");
+  exit();
+    }
+
+
+
+
+else{
+
+
+
+
+
+$sql = "INSERT INTO event_table (event_name, event_date, event_time_start, event_time_end, cusact_id, theme, venue, reserve_date, reserve_time, package_id, Availed) VALUES ('$e_name', '$my_date', '$t_event', '$e_t_event', '$c_id', '$theme', '$venue', '$date', '$time', '$p_id', '$avail' );";
+$result = mysqli_query ($conn, $sql);
+
+
+$newest_id = mysqli_insert_id($conn);
+$reservation_type = 1;
+$order_q = 1;
+
+$sql = "SELECT * FROM admin WHERE admin_id = '1'" ;
+$result = mysqli_query($conn, $sql);
+$resultcheck = mysqli_num_rows($result);
+
+
+$sql = "INSERT INTO reservation (reservation_type_id, admin_id, event_id, res_expires) VALUES ('$reservation_type', '$resultcheck', '$newest_id', NOW() + INTERVAL 24 HOUR );";
+$result = mysqli_query ($conn, $sql);
+
+//price
+$p_sql = "SELECT package_price from package WHERE package_id = '$p_id'" ;
+$p_result = mysqli_query($conn, $p_sql);
+$price = mysqli_fetch_assoc($p_result);
+
+
+$p_p = $price['package_price'];
+
+
+ header("Location:cart-index.php?n_id=$newest_id&new_p_id=$p_id");
+
+
+
+ if(!$result){
+        echo("Error description: " . mysqli_error($conn));
+    }
+}
+
+
+
+
+}
+}
+
+
 
 
 
@@ -196,6 +290,7 @@ $order_n_id = mysqli_insert_id($conn);
 <input type="text" name="venue" placeholder="Enter Venue*"/>
 
 <input name="submit" type="submit" value="Submit"/>
+<input name="submit-addon" type="submit" value="Click to add services"/>
 
 <style type="text/css">
 
@@ -233,30 +328,44 @@ $json = json_encode($sentToList);
 
 
 
-
-
-var dateToday = new Date(); 
-$(function() {
-
+$( function() 
+{
+  //build up your array
+  //this is a mock of var arrayFromPHP = <?php echo json_encode($json); ?>;
+  var phpArrayString = '<?php print_r($json)?>';
   
+  //parse your json here
+  var array = JSON.parse(phpArrayString);
 
-
-
-
-var array = <?php print_r($json) ?>
-
-$('#mydate').datepicker({
-     
-    beforeShowDay: function(date){
-        
+  //include dateFormat AND beforeShowDay options
+  $( "#mydate" ).datepicker({ 
+      dateFormat: 'yy-mm-dd',
+      beforeShowDay: function(date)
+      {
         var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-        return [ array.indexOf(string) == -1 ]
-
-    }
- 
+        
+        //You can even use tooltips to make dates you can select more obvious
+        return [ array.indexOf(string) == -1, 'highlight', 'You may select this date' ];
+      }
+  });
+  
+    //Optionally - call the tooltip plugin on dates that can be selected
+  $('#mydate .highlight a').tooltip();
 });
 
-});
+// $(document).ready(function () {
+//     initComponent();
+// });
+
+// function initComponent () {
+//     var array = ['2017-09-05', '2017-09-06'];
+//     $('#date').datepicker({
+//     dateFormat: 'yy-mm-dd',
+//     beforeShowDay: function(d) {
+//         var string = jQuery.datepicker.formatDate('yy-mm-dd', d);
+//         return [ array.indexOf(string) == -1 ]
+//     }
+// });
 
 
 </script>

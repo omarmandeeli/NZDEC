@@ -24,7 +24,6 @@ echo "<div class='grid'>";
         echo "<ul>";
         echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
         echo "<ul/>";
-        echo  "<a href='package.all.php?id=$id'>Submit</a>";
       echo "</div>";
     }
   echo "</div>";
@@ -38,5 +37,10 @@ echo "<div class='grid'>";
 
 
     <form action="includes/inquire.inc.php" method="POST">
+        <div class="buttonwrap">
+
+    <div class="packbuttinquire">
       <input type="submit" name="submit" value="Inquire Now">
+    </div>
+</div>
       </form>

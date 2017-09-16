@@ -1,11 +1,7 @@
 <?php  
  //action.php  
  session_start();  
-
-
-include 'includes/dbh.inc.php';
-
-
+ $connect = mysqli_connect("localhost", "root", "", "test");  
  if(isset($_POST["product_id"]))  
  {  
       $order_table = '';  
