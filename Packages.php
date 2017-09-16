@@ -9,6 +9,10 @@ $sql = "SELECT * FROM package";
 $data = mysqli_query($conn, $sql);
 
 
+echo '<div class="packagehead">
+<h1>PACKAGES</h1>
+</div>';
+echo "</div>";
 echo "<div class='grid'>";
     while ($record = mysqli_fetch_array($data)) {
       $id = $record['package_id'];
@@ -73,7 +77,6 @@ mysqli_query($conn, $sql);
   // echo  "<a href='package.all.php?id=$id'>Submit</a>";
   // echo "</div>";
   // }
-  echo "</div>";
   if (isset($_POST['submit'])) {
   include 'dbh.inc.php';
   $p_id = $_GET['id'];

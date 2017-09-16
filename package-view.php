@@ -15,6 +15,10 @@ while ($record = mysqli_fetch_array($data)) {
 $id = $record['package_id'];
 
 
+echo '<div class="packagehead">
+<h1>PACKAGES</h1>
+</div>';
+
 echo "<div class='grid'>";
     while ($record = mysqli_fetch_array($data)) {
       $id = $record['package_id'];

@@ -979,11 +979,24 @@ button:hover {
   color: #fff;
 
 }
+/**/
+.packagehead{
+    padding: 2em;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
 
+.packagehead h1{
+    text-align: center;
+    color: #257;
+    font-weight: bold;
+    font-size: 3em;
+}
 /**/
 .grid {
-  margin: 0 auto;
-  padding: 0 auto;
+    width: 80%;
+    margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100%;
@@ -992,25 +1005,27 @@ button:hover {
 
 .grid > div{
   min-width: 25%;
-  background-color: #222;
-  padding: 1em;
+  background-color: #f3f3f3;
   margin: 1em;
   border: 2px #39d solid;
-  border-radius: 1em;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 .grid h1{
     box-sizing: border-box;
-  padding-bottom: 1em;
-  color: #fff;
-  text-align: center;
+    font-weight: bold;
+    padding: 1em 0 1em 0;
+    color: #000;
+    text-align: center;
 }
 
 .grid img{
-    box-sizing: border-box;
-  margin:auto;
-  display: block;
+    display: block;
+  margin: auto;
+  min-width: 90%;
   border: 2px #39d solid;
+      box-sizing: border-box;
 }
 
 .grid ul{
@@ -1028,22 +1043,19 @@ button:hover {
   margin-left: 18px;
   padding: 0 auto;
   padding-bottom: 18px;
-  color: #f3f3f3;
-  display: inline-block;
-  vertical-align: top;
+  color: #777;
 }
 
 .grid a{
+    margin-left: 1em;
     display: block;
-    vertical-align: bottom;
-    padding: 7px;
+    padding: 5px 1px;
     color: #fff;
     background: #257;
     font: normal 18px Arial, Helvetica, sans-serif;
     text-align: center;
     width: 35%;
     border: none;
-    border-width: 0;
     box-sizing: border-box;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -1056,8 +1068,6 @@ button:hover {
 }
 
 .gridcontainer {
-  width: 80%;
-  margin: auto;
 }
 /**/
 

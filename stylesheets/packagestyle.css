@@ -978,6 +978,20 @@ button:hover {
 
 }
 
+.packagehead{
+    padding: 2em;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.packagehead h1{
+    text-align: center;
+    color: #257;
+    font-weight: bold;
+    font-size: 3em;
+}
+
 .grid {
     width: 80%;
     margin: auto;
