@@ -541,7 +541,7 @@ footer {
 <style type="text/css">
 .form-style-5{
     max-width: 500px;
-    padding: 10px 20px;
+    padding: auto;
     background: #f4f7f8;
     margin: auto;
     padding: 20px 0 0 0;
@@ -552,17 +552,40 @@ footer {
 }
 .form-style-5 fieldset{
     border: none;
-    margin: 0 0 0 260px;
+    margin: auto;
 }
 .form-style-5 legend {
     font-size: 1.4em;
     margin-bottom: 10px;
-    margin: 30px 0 0 260px;
+    margin: auto;
 }
 .form-style-5 label {
     display: block;
     margin-bottom: 8px;
     margin: 10px 0 0 260px;
+}
+
+.form-style-5 input[type="text"]{
+
+ font-family: Georgia, "Times New Roman", Times, serif;
+ display: block;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: auto;
+    outline: 0;
+    padding: 7px;
+    width: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+
 }
 
 .form-style-5 input[type="date"],
@@ -574,12 +597,13 @@ footer {
 .form-style-5 input[type="url"],
 .form-style-5 textarea,
 .form-style-5 select {
+    display: block;
     font-family: Georgia, "Times New Roman", Times, serif;
     background: rgba(255,255,255,.1);
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    margin: 0 0 0 150px;
+    margin: auto;
     outline: 0;
     padding: 7px;
     width: 50%;
@@ -743,30 +767,6 @@ float: left;
 
   text-align: center;
   color: #fff;
-}
-
-
-
-.form-style-5 input[type="text"]{
-
- font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255,255,255,.1);
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 0 0 0 410px;
-    outline: 0;
-    padding: 7px;
-    width: 37.5%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color:#8a97a0;
-    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    margin-bottom: 30px;
-
 }
 
 .containerform{

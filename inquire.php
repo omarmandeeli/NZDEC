@@ -14,7 +14,6 @@
 
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
-
     <link href="stylesheets/formsstyle.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
 
@@ -63,18 +62,13 @@
 <form>
 <fieldset>
 <legend><span class="number1">1</span> Client Information</legend>
-<input type="text" name="field1" placeholder="Your Name *">
+<input type="text" name="field1" placeholder="Your Full Name *">
 <input type="text" name="field1" placeholder="Your Address *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="text" name="field1" placeholder="Lorem Ipsum *">
-<input type="email" name="field2" placeholder="Your Email *">
+<input type="text" name="field1" placeholder="Contact *">
 <textarea name="field3" placeholder="More Details"></textarea>
 <legend><span class="number">2</span> Event Details </legend>
-<label for="job">Event</label>
 <select id="job" name="field4">
-<optgroup label="Lorem Ipsum">
+<option value="" disabled selected>Nature or purpose of event *</option>
   <option value="fishkeeping">Lorem</option>
   <option value="reading">Lorem</option>
   <option value="boxing">Lorem</option>
@@ -82,17 +76,14 @@
   <option value="gaming">Lorem</option>
   <option value="snooker">Lorem</option>
   <option value="other_indoor">Lorem</option>
-</optgroup>
-<optgroup label="Lorem Ipsum">
   <option value="football">Lorem</option>
-  <option value="swimming">SLorem</option>
+  <option value="swimming">Lorem</option>
   <option value="fishing">Lorem</option>
   <option value="climbing">Lorem</option>
   <option value="cycling">Lorem</option>
   <option value="other_outdoor">Lorem</option>
 </optgroup>
 </select>
-<label for="job">Day of the Event</label>
 <input type="date" name="field2" placeholder="Enter Date of Event*">
 <textarea name="field3" placeholder="More Details About the Event"></textarea>
 </fieldset>
