@@ -35,11 +35,7 @@ echo "<div class='grid'>";
 
 }
 
-
-
 ?>
-
-
     <form action="includes/inquire.inc.php" method="POST">
         <div class="buttonwrap">
 
@@ -48,3 +44,9 @@ echo "<div class='grid'>";
     </div>
 </div>
       </form>
+      <footer id='contacts'>
+          <span class="fudge">ZDEC</span>
+        <span class='cc'>
+          Copyright &copy; 2014-2017, Zaldy Ducusin Events and Consultancy
+        </span>
+      </footer>

@@ -73,19 +73,12 @@
   </div>
 </div>
 
-
-
-
-
-
       <footer id='contacts'>
-
+          <span class="fudge">ZDEC</span>
         <span class='cc'>
-          @ 2014 . Zaldy Ducusin
+          Copyright &copy; 2014-2017, Zaldy Ducusin Events and Consultancy
         </span>
       </footer>
-    </div>
-
 
   </body>
 </html>

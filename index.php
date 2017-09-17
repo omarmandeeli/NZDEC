@@ -266,8 +266,8 @@ $data = mysqli_query($conn, $sql);
           <hr>
           <a class='btn' href='#'>Email Us!</a>
         </div>
-        <span class='cc'>
-          @ 2014 . Zaldy Ducusin
+          <span class='cc'>
+              Copyright &copy; 2014-2017, Zaldy Ducusin Events and Consultancy
         </span>
       </footer>
     </div>

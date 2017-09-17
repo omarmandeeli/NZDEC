@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic);
 /* line 3, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 *, *:before, *:after {
@@ -369,7 +370,7 @@ header {
 footer {
   position: relative;
   margin: 0;
-  padding: 2em 0;
+  padding: 2px 0 50px 0;
   height: 300px;
   background: #214a6d; }
   /* line 349, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
