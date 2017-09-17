@@ -161,7 +161,7 @@ header {
     box-shadow: 0 -2px 0 0 #2e8ece inset; }
   /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .parallax {
-    
+
   }
   /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .site-logo {
@@ -583,15 +583,15 @@ footer {
     outline: 0;
     padding: 7px;
     width: 50%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
-    
+
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -725,9 +725,11 @@ footer {
 }
 
 .container2 {
+display: block;
   max-width: 600px;
   width: 100%;
-  margin: 150px 300px 50px auto ;
+  margin: auto ;
+  margin-top: 5em;
   position: relative;
 }
 
@@ -735,7 +737,7 @@ footer {
 #contact input[type="email"],
 #contact input[type="tel"],
 #contact input[type="url"],
-#contact input[type="password"]
+#contact input[type="password"],
 #contact textarea,
 #contact button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
@@ -754,6 +756,8 @@ footer {
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 50px;
+  font-weight: bold;
+  color: #555;
 }
 
 #contact h4 {
@@ -780,7 +784,7 @@ fieldset {
   width: 100%;
   border: 1px solid #ccc;
   background: #FFF;
-  margin: 0 0 5px;
+  margin: 0 0 1em 0;
   padding: 10px;
 }
 
@@ -806,15 +810,16 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #1abc9c;
+  background: #257;
   color: #FFF;
-  margin: 0 0 5px;
+  margin: 3em 0 5px 0;
   padding: 10px;
   font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
   background: #1abc9c;
+  color: #000;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -3392,7 +3397,7 @@ footer {
 /* IE6/7 support */
 .slicknav_menu { *zoom: 1 }
 
-/* 
+/*
     User Default Style
     Change the following styles to modify the appearance of the menu.
 */
@@ -3418,7 +3423,7 @@ footer {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;  
+    border-radius: 4px;
     background-color: #222222;
 }
 /* Button Text */
@@ -3470,5 +3475,5 @@ footer {
     background-color: #3DB4FF;
 }
 .slicknav_nav .slicknav_txtnode {
-     margin-left:15px;   
+     margin-left:15px;
 }
