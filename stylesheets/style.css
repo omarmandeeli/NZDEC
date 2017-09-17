@@ -342,6 +342,30 @@ header {
       width: 70%; }
 
 /* line 342, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
+.buttonshit button[type="submit"]{
+      background-color: #214a6d;
+      width: 140px;
+      border: 0;
+      float: left;
+      padding: 5px 0;
+       margin: 0px 0 5px 50px;
+      text-align: center;
+      color: #fff;
+      -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+    }
+
+    .buttonshit button[type="submit"]:hover{
+      background-color: #1abc9c;
+      width: 140px;
+      border: 0;
+      padding: 5px 0;
+      margin: 0px 0 5px 50px;
+      text-align: center;
+      color: #fff;
+  }
+
+
 footer {
   position: relative;
   margin: 0;

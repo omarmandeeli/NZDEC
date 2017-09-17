@@ -66,7 +66,7 @@ $data = mysqli_query($conn, $sql);
       $c_name = $record['cus_fname'];
 
     }
-        
+
 
         echo '
            <li>
@@ -76,7 +76,7 @@ $data = mysqli_query($conn, $sql);
               <a href='.'reservation.php'.'>RESERVATIONS</a>
             </li>
         <form action="includes/logout.inc.php"    method="POST">
-      
+
         <button type="submit" name="submit">logout</button>
         ';
         echo '<form> ';
@@ -89,16 +89,28 @@ $data = mysqli_query($conn, $sql);
         echo '</form>';
       } else {
         echo '
-
           <li>
               <a href='.'package-view.php'.'>PACKAGE</a>
             </li>
-   
-        <form action="login.php"><button type="submit" name="submit">
-        Login</button> </form>
-        <form action="signup.php"> <button type="submit" name="signup">Signup</button> </form>';
+
+            <form action="login.php">
+            <div class="buttonshit">
+                <button type="submit" name="submit">
+                    Login
+                </button>
+            </div>
+            </form>
+
+            <form action="signup.php">
+            <div class="buttonshit">
+                <button type="submit" name="signup">
+                    Signup
+                </button>
+            </div>
+            </form>
+        ';
       }
-    
+
       ?>
 
         </div>

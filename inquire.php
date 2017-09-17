@@ -8,22 +8,22 @@
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <title>Inquire</title>
 
-    
+
 
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 
     <link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/plugin.css" media="screen" rel="stylesheet" type="text/css" />
-  
+
     <link href="stylesheets/formsstyle.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="javascripts/libs/modernizr-2.7.1.min.js" type="text/javascript"></script>
-    
+
   </head>
   <body class='homepage'>
-   
+
     <div class='container'>
       <header id='header' class="fixed-top">
-   
+
         <div class='site-main-menu' id='menu'>
           <ul>
             <li>
@@ -46,7 +46,7 @@
             <a class='links' href='#' target='_blank' title='Twitter'>
               <i class='fa fa-twitter'></i>
             </a>
-            
+
             <a class='links' href='#' target='_blank' title='Youtube'>
               <i class='fa fa-facebook'></i>
             </a>
@@ -55,10 +55,10 @@
             </a>
           </span>
         </div>
-        
+
       </header>
 
-
+<div class="containerform">
 <div class="form-style-5">
 <form>
 <fieldset>
@@ -70,8 +70,6 @@
 <input type="text" name="field1" placeholder="Lorem Ipsum *">
 <input type="text" name="field1" placeholder="Lorem Ipsum *">
 <input type="email" name="field2" placeholder="Your Email *">
-
-
 <textarea name="field3" placeholder="More Details"></textarea>
 <legend><span class="number">2</span> Event Details </legend>
 <label for="job">Event</label>
@@ -93,28 +91,25 @@
   <option value="cycling">Lorem</option>
   <option value="other_outdoor">Lorem</option>
 </optgroup>
-</select>  
+</select>
 <label for="job">Day of the Event</label>
 <input type="date" name="field2" placeholder="Enter Date of Event*">
-<textarea name="field3" placeholder="More Details About the Event"></textarea>    
+<textarea name="field3" placeholder="More Details About the Event"></textarea>
 </fieldset>
 <fieldset>
 <legend><span class="number">3</span> Additional Info (Optional)</legend>
 <textarea name="field3" placeholder="Notes:"></textarea>
 </fieldset>
  <button name="submit" type="button" id="contact-submit" onclick="location.href='payment.php';">Submit</button>
-
-
 </form>
-
-      
+</div>
+</div>
       <footer id='contacts'>
-        
+
         <span class='cc'>
           @ 2014 . Zaldy Ducusin
         </span>
       </footer>
-    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script>
       window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.10.2.min.js"><\/script>')

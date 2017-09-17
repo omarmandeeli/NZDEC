@@ -161,7 +161,7 @@ header {
     box-shadow: 0 -2px 0 0 #2e8ece inset; }
   /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .parallax {
-    
+
   }
   /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .site-logo {
@@ -543,7 +543,7 @@ footer {
     max-width: 500px;
     padding: 10px 20px;
     background: #f4f7f8;
-    margin: 10px auto;
+    margin: auto;
     padding: 20px 0 0 0;
     background: #f4f7f8;
     border-radius: 8px;
@@ -583,15 +583,15 @@ footer {
     outline: 0;
     padding: 7px;
     width: 50%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
-    
+
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -740,7 +740,7 @@ button:hover {
   border: 0;
 float: left;
   padding: 10px 0;
- 
+
   text-align: center;
   color: #fff;
 }
@@ -758,13 +758,21 @@ float: left;
     outline: 0;
     padding: 7px;
     width: 37.5%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
 
+}
+
+.containerform{
+    background-color: #f3f3f3;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom:  2em;
+    width: 70%;
 }
