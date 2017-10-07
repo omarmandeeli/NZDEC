@@ -61,10 +61,38 @@ echo "<div class='grid'>";
         echo "<p>" . "Package Details" . "</p>";
         echo "<p>" . $record_p['package_details'] . "</p>" ;
     echo "</div>";
-    echo "<div class='i12'>";
+  echo '<div class="i12">';
         echo "<p>" . "Reservation Status" . "</p>";
-        echo "<p>" . $record_p['reservation_status'] . "</p>" ;
+
+
+        $upp=$record_p['reservation_status'];
+        $upp = strtoupper($upp);
+
+                IF($upp == 'PENDING RESERVATION'){
+
+                echo "<p style='color:red;'>" . $record_p['reservation_status'] . "</p>" ;
+                }
+
+                ELSEIF($upp == 'APPROVED RESERVATION'){
+                echo "<p style='color:green;'>" . $record_p['reservation_status'] . "</p>" ;
+                }
+
+                ELSEIF($upp == 'PENDING CANCELATION'){
+                echo "<p style='color:yellow;'>" . $record_p['reservation_status'] . "</p>" ;
+                }
+
+                ELSEIF($upp == 'APPROVED CANCELATION'){
+                echo "<p style='color:blue;'>" . $record_p['reservation_status'] . "</p>" ;
+                }
+
+                  ELSE {
+                echo "<p style='color:blue;'>" . $record_p['reservation_status'] . "</p>" ;
+                }
+
+
     echo "</div>";
+
+
 echo "</div>";
 echo "</div>";
 

@@ -20,7 +20,7 @@ echo "<div class='grid'>";
           echo "<h1>" . $record['package_name'] . "</h1>";
         echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
         echo nl2br("<p>" . "<br />" .  $record['package_details']. "</p>") ;
-        echo  "<a href='package.all.php?id=$id'>Submit</a>";
+        echo  "<a href='package.all.php?id=$id'><button>Submit</button></a>";
       echo "</div>";
 
     }
