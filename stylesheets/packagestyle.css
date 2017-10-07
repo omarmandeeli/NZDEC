@@ -1030,7 +1030,7 @@ button:hover {
     box-sizing: border-box;
 }
 
-.grid> div> p{
+.grid p{
     display: block;
     text-align: left;
     font: normal 18px Arial, Helvetica, sans-serif;
@@ -1038,7 +1038,6 @@ button:hover {
     padding: 0 auto;
     color: #222;
     text-transform: full-width;
-
 }
 
 

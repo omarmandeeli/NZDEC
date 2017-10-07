@@ -18,18 +18,18 @@ $id = $record['package_id'];
 echo '<div class="packagehead">
 <h1>PACKAGES</h1>
 </div>';
-
+echo "</div>";
 echo "<div class='grid'>";
     while ($record = mysqli_fetch_array($data)) {
       $id = $record['package_id'];
       echo "<div>";
           echo "<h1>" . $record['package_name'] . "</h1>";
         echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
-        echo nl2br("<p>" . "<br />" .  $record['package_details'] . "<br />" . "</p>") ;
+        echo nl2br("<p>" . "<br />" .  $record['package_details']. "</p>") ;
+        echo  "<a href='package.all.php?id=$id'>Submit</a>";
       echo "</div>";
     }
-  echo "</div>";
-
+ echo "</div>";
 
 }
 

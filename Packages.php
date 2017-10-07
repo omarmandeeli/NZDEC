@@ -22,6 +22,7 @@ echo "<div class='grid'>";
         echo nl2br("<p>" . "<br />" .  $record['package_details']. "</p>") ;
         echo  "<a href='package.all.php?id=$id'>Submit</a>";
       echo "</div>";
+
     }
  echo "</div>";
 
