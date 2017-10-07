@@ -35,9 +35,6 @@
             <li>
               <a href='index.php'>CONTACT</a>
             </li>
-            <li>
-              <a href='inquire.php'>INQUIRE</a>
-            </li>
           </ul>
 
         </div>

@@ -104,6 +104,7 @@ mysqli_query($conn, $sql);
 <!-- <div class="form-style-5"> -->
 <div class="formstyle1">
   <form method="POST">
+    <h1 id="dick">EVENT DETAILS<h1>
     <label>Event Name</label>
     <input type="text" name="e_name" placeholder="Enter Event Name*"/>
     <label for="job">Day of the Event</label>

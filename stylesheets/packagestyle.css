@@ -1104,6 +1104,7 @@ cursor: pointer;
     display: block;
     margin-bottom: 8px;
     margin: 50px 0 7px 200px;
+    color: #222;
 }
 
 .formstyle1 input[type="text"],
@@ -1243,4 +1244,18 @@ footer span.fudge {
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+#dick{
+    text-align: center;
+    background-position: center;
+    margin: auto;
+    padding: 0;
+    color:#fff;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #257;
+    margin: -36px 0 0 0;
+    padding: 1em 200px .5em 200px;
+    
 }
