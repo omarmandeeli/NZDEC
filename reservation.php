@@ -1,111 +1,94 @@
-
-
-
 <?php
- session_start();
-
- include_once 'reservation-header.php';
-
+session_start();
+include_once 'reservation-header.php';
 include 'includes/dbh.inc.php';
-
-
-
-
-
+//======================================================================
+// SY START
+//======================================================================
 $c_id = $_SESSION['u_id'];
-
-
-
-$p_sql = "SELECT p.package_id, p.package_name, p.package_price, p.package_details, p.package_categories, p.package_id, e.event_id, e.event_name, e.event_date, e.event_time_start, e.event_time_end, e.theme, e.reserve_date, e.reserve_time FROM event_table as e inner join package as p on e.package_id = p.package_id where cusact_id = $c_id";
+$p_sql = "SELECT p.package_id, p.package_name, p.package_price, p.package_details, p.package_categories, p.package_id, e.event_id, e.event_name, e.event_date, e.event_time_start, e.event_time_end, e.theme, e.reserve_date, e.reserve_time, rt.reservation_status FROM event_table as e inner join package as p on e.package_id = p.package_id INNER JOIN reservation as rs ON rs.event_id = e.event_id INNER JOIN reservation_type as rt ON rs.reservation_type_id = rt.reservation_type_id where cusact_id = $c_id;";
 $data_p = mysqli_query($conn, $p_sql) ;
-
-
-
-
-
-
-  while ($record_p = mysqli_fetch_array($data_p)) {
-
+while ($record_p = mysqli_fetch_array($data_p)) {
 $e_id = $record_p ['event_id'];
 $p_id = $record_p ['package_id'];
 
-echo "<table class = ". "rwd-table" . "border = 1>";
-echo "<tr>";
-echo "<th>" . "Package Name" . "</th>";
-echo "<th>" . "Package Price" . "</th>";
-echo "<th>" . "Package Details" . "</th>";
-echo "<th>" . "Package Categories" . "</th>";
-echo "<th>" . "Name of The Event" ."</th>";
-echo "<th>" . "Date of the Event" ."</th>";
-echo "<th>" . "Time of the Event" ."</th>";
-echo "<th>" . "End Time of the Event" ."</th>";
-echo "<th>" . "Theme" ."</th>";
-echo "<th>" . "Reserve Date" ."</th>";
-echo "<th>" . "Reserve Time" ."</th>";
+echo "<div class='yourreservation'>";
+    echo "<h1>Your Reservation: <span style='color:#222'>".$record_p['event_name']."<span></h1>";
+echo "</div>";
+echo "<div class='gridcon'>";
+echo "<div class='grid'>";
+    echo "<div class='i1'>";
+        echo "<p>" . "Package Name" . "</p>";
+        echo "<p>" . $record_p['package_name'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i2'>";
+        echo "<p>" . "Package Price" . "</p>";
+        echo "<p>" . $record_p['package_price'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i4'>";
+        echo "<p>" . "Package Categories" . "</p>";
+        echo "<p>" . $record_p['package_categories'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i5'>";
+        echo "<p>" . "Name of The Event" ."</p>";
+        echo "<p>" . $record_p['event_name'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i6'>";
+        echo "<p>" . "Date of the Event" ."</p>";
+        echo "<p>" . $record_p['event_date'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i7'>";
+        echo "<p>" . "Time of the Event" ."</p>";
+        echo "<p>" . $record_p['event_time_start'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i8'>";
+        echo "<p>" . "End Time of the Event" ."</p>";
+        echo "<p>" . $record_p['event_time_end'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i9'>";
+        echo "<p>" . "Theme" ."</p>";
+        echo "<p>" . $record_p['theme'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i10'>";
+        echo "<p>" . "Reserve Date" ."</p>";
+        echo "<p>" . $record_p['reserve_date'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i11'>";
+        echo "<p>" . "Reserve Time" ."</p>";
+        echo "<p>" . $record_p['reserve_time'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i3'>";
+        echo "<p>" . "Package Details" . "</p>";
+        echo "<p>" . $record_p['package_details'] . "</p>" ;
+    echo "</div>";
+    echo "<div class='i12'>";
+        echo "<p>" . "Reservation Status" . "</p>";
+        echo "<p>" . $record_p['reservation_status'] . "</p>" ;
+    echo "</div>";
+echo "</div>";
+echo "</div>";
 
-echo "</tr>";
-echo "<tr>"; 
-echo "<td>" . "<br />" .  $record_p['package_name'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['package_price'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['package_details'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['package_categories'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['event_name'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['event_date'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['event_time_start'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['event_time_end'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['theme'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['reserve_date'] . "<br />" . "</td>" ;
-echo "<td>" . "<br />" .  $record_p['reserve_time'] . "<br />" . "</td>" ;
-
-echo "<tr/>";
-
-
-
-echo  "<a href='order.paynow.php?id=$e_id&p_id=$p_id'>Submit</a>";
-
+echo "<div class='cancelres'>";
+    echo "<a href='order.paynow.php?id=$e_id&p_id=$p_id' target='_parent'><button>Pay Now</button></a>";
+    echo "<button>Cancel Reservation</button>";
+echo "</div>";
 }
-echo "</table>";
-
+// ======================================================================
+// SY END
+// ======================================================================
 if(!$data_p){
         echo("Error description: " . mysqli_error($conn));
     }
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-      <footer id='contacts'>
-        
-        <span class='cc'>
-          @ 2014 . Zaldy Ducusin
-        </span>
-      </footer>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-  
-
-
-
-
-
-
-
-
-    <script src="javascripts/libs/holder.js" type="text/javascript"></script>
-    <script src="javascripts/plugins.js" type="text/javascript"></script>
-    <script src="javascripts/formsjs.js" type="text/javascript"></script>
-  </body>
+<footer id='contacts'>
+    <span class="fudge">ZDEC</span>
+  <span class='cc'>
+    Copyright &copy; 2014-2017, Zaldy Ducusin Events and Consultancy
+  </span>
+</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="javascripts/libs/holder.js" type="text/javascript"></script>
+<script src="javascripts/plugins.js" type="text/javascript"></script>
+<script src="javascripts/formsjs.js" type="text/javascript"></script>
+</body>
 </html>

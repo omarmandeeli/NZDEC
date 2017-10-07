@@ -19,13 +19,12 @@ echo "<div class='grid'>";
       echo "<div>";
           echo "<h1>" . $record['package_name'] . "</h1>";
         echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
-        echo "<ul>";
-        echo nl2br("<li>" . "<br />" .  $record['package_details']. "</li>") ;
-        echo "<ul/>";
+        echo nl2br("<p>" . "<br />" .  $record['package_details']. "</p>") ;
         echo  "<a href='package.all.php?id=$id'>Submit</a>";
       echo "</div>";
     }
-  echo "</div>";
+ echo "</div>";
+
 if (isset($_POST['submit'])) {
 
 include 'dbh.inc.php';
@@ -120,11 +119,12 @@ mysqli_query($conn, $sql);
   </form>
 </div>
 
-  <footer id='contacts'>
-    <span class='cc'>
-    @ 2014 . Zaldy Ducusin
-    </span>
-  </footer>
+<footer id='contacts'>
+    <span class="fudge">ZDEC</span>
+  <span class='cc'>
+    Copyright &copy; 2014-2017, Zaldy Ducusin Events and Consultancy
+  </span>
+</footer>
 
 <!-- </div> -->
 

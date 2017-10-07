@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /* line 3, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -20,7 +19,12 @@ body {
 
 /* line 19, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 .container {
-  background: white; }
+  background:  url("../images/kasal32.jpg") fixed 50% 50%;
+  width: 100%;
+  height: 100%;
+  background-size: cover; 
+
+}
   /* line 22, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   .container .site-what-i-do {
     width: 100%;
@@ -162,7 +166,7 @@ header {
     box-shadow: 0 -2px 0 0 #2e8ece inset; }
   /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .parallax {
-
+    
   }
   /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .site-logo {
@@ -210,6 +214,8 @@ header {
         list-style: none; }
         /* line 222, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
         header .site-main-menu ul li a {
+          padding-top: 10px;
+          padding-bottom: 5px;
           color: #fdfdfd;
           margin: 0;
           display: block;
@@ -332,11 +338,11 @@ header {
 
 /* line 342, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 footer {
-  position: relative;
-  margin: 0;
-  padding: 2em 0;
-  height: 300px;
-  background: #214a6d; }
+    position: relative;
+    margin: 0;
+    padding: 2em 0;
+    height: 300px;
+    background: #214a6d }
   /* line 349, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   footer .site-wrapper {
     text-align: center; }
@@ -584,15 +590,15 @@ footer {
     outline: 0;
     padding: 7px;
     width: 50%;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
-
+    
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -702,7 +708,6 @@ footer {
 
 
 </style>
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 * {
   margin: 0;
@@ -722,24 +727,24 @@ footer {
 .container1 {
   max-width: 400px;
   width: 100%;
-  margin: 200px auto auto 100px ;
+  margin: 100px auto auto 100px ;
   position: relative;
 }
 
 .container2 {
-display: block;
-  max-width: 600px;
+  max-width: 560px;
   width: 100%;
-  margin: auto ;
-  margin-top: 5em;
+  margin: 110px 300px 50px auto ;
   position: relative;
+
 }
+
 
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
 #contact input[type="url"],
-#contact input[type="password"],
+#contact input[type="password"]
 #contact textarea,
 #contact button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
@@ -747,19 +752,20 @@ display: block;
 
 #contact {
   background: #F9F9F9;
-  padding: 25px;
-  margin: 10px 0 auto auto;
+  padding: 30px;
+  margin: 10px 450px 95px -400px;
 
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #contact h3 {
   display: block;
+  text-align: center;
   font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 50px;
-  font-weight: bold;
-  color: #555;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #1abc9c;
 }
 
 #contact h4 {
@@ -783,11 +789,15 @@ fieldset {
 #contact input[type="url"],
 #contact input[type="password"],
 #contact textarea {
-  width: 100%;
+  text-align: center;
+  width: 450px;
+  height: 30px;
   border: 1px solid #ccc;
   background: #FFF;
-  margin: 0 0 1em 0;
+  margin: 0 0 5px;
   padding: 10px;
+  font-size: 14px;
+
 }
 
 #contact input[type="text"]:hover,
@@ -812,16 +822,15 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #257;
+  background: #1abc9c;
   color: #FFF;
-  margin: 3em 0 5px 0;
+  margin: 0 0 5px;
   padding: 10px;
   font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
   background: #1abc9c;
-  color: #000;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -1170,26 +1179,8 @@ h2[jan],.monthLink[jan] {
 }
 
 footer {
-    text-align: center;
     font-family: 'PT Mono', sans-serif;
 }
-
-footer span.fudge {
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-    font-family: "Open Sans";
-    font-size: 65px;
-    font-weight: normal;
-  position: absolute;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  letter-spacing: -5px;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
 
 .month:not(#jan):target h2[jan],.month:not(#jan):target .monthLink[jan]{
     display:none;
@@ -3322,7 +3313,7 @@ kbd {
 
 /* line 30, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/screen.css.sass */
 footer {
-  margin-top: 3em;
+  margin-top: 0em;
   text-align: right; }
 
 /* line 36, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/screen.css.sass */
@@ -3417,7 +3408,7 @@ footer {
 /* IE6/7 support */
 .slicknav_menu { *zoom: 1 }
 
-/*
+/* 
     User Default Style
     Change the following styles to modify the appearance of the menu.
 */
@@ -3443,7 +3434,7 @@ footer {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;
+    border-radius: 4px;  
     background-color: #222222;
 }
 /* Button Text */
@@ -3495,20 +3486,5 @@ footer {
     background-color: #3DB4FF;
 }
 .slicknav_nav .slicknav_txtnode {
-     margin-left:15px;
-}
-
-footer span.fudge {
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-    font-family: "Open Sans";
-    font-size: 65px;
-    font-weight: normal;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    letter-spacing: -5px;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+     margin-left:15px;   
 }

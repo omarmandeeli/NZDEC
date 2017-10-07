@@ -25,9 +25,7 @@ echo "<div class='grid'>";
       echo "<div>";
           echo "<h1>" . $record['package_name'] . "</h1>";
         echo '<img src="data:image/jpeg;base64,'.base64_encode($record['package_image'] ).'" height="200" width="200" class="img-thumnail" />';
-        echo "<ul>";
-        echo nl2br("<li>" . "<br />" .  $record['package_details'] . "<br />" . "</li>") ;
-        echo "<ul/>";
+        echo nl2br("<p>" . "<br />" .  $record['package_details'] . "<br />" . "</p>") ;
       echo "</div>";
     }
   echo "</div>";

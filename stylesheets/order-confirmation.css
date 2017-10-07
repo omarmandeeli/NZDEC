@@ -161,7 +161,7 @@ header {
     box-shadow: 0 -2px 0 0 #2e8ece inset; }
   /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .parallax {
-    
+
   }
   /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .site-logo {
@@ -583,15 +583,15 @@ footer {
     outline: 0;
     padding: 7px;
     width: 50%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
-    
+
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -991,8 +991,8 @@ th{
   background: #eee;
   color: #777;
   padding: 15px;
-  
-  
+
+
 }
 
 tr:nth-child(even){
@@ -1000,13 +1000,13 @@ tr:nth-child(even){
   background: #eee;
 
 
- 
+
 
 }
 td{
   width: 10px;
   text-align: center;
-   word-wrap: break-word; 
+   word-wrap: break-word;
    padding-bottom: 15px;
 }
 
@@ -1063,7 +1063,7 @@ cursor: pointer;
 }
 #content-payment form {
 
- 
+
   margin: 10px 0 0 0;
   float: right;
 
@@ -1074,3 +1074,219 @@ form div{
   margin-top: 5px;
 }
 
+/*SY START ------------------------------------------*/
+
+.yourreservation{
+    margin: 0;
+    padding: 0;
+}
+
+.yourreservation > h1{
+    text-align: center;
+    color: #257;
+        margin-top: 3em;
+        margin-bottom: ;
+}
+
+.yourreservation2{
+    margin: 0;
+    padding: 0;
+}
+
+.yourreservation2 > h1{
+    text-align: center;
+    color: #257;
+        margin-top: 0em;
+        margin-bottom: ;
+}
+
+.gridcon{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.grid {
+margin-bottom: 2.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "name date start end theme reservedate reservetime "
+}
+
+.grid > div >p{
+    margin: 0;
+    padding: 0;
+    font: normal arial, helvetica, sans-serif;
+    text-align: center;
+}
+
+.grid > div >p:nth-child(odd){
+    display: block;
+    background-color: #257;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.grid > div >p:nth-child(even){
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 22px;
+}
+.name{
+    grid-area: name;
+    border: solid 1px;
+}
+
+.date{
+    grid-area: date;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.start{
+    grid-area: start;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.end{
+    grid-area: end;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.theme{
+    grid-area: theme;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.reservedate{
+    grid-area: reservedate;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.reservetime{
+    grid-area: reservetime;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+
+
+
+.gridcon2{
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "i1 i2 i4"
+    "i3 i3 i3";
+}
+
+.grid2 > div >p{
+    margin: 0;
+    padding: 0;
+    font: normal arial, helvetica, sans-serif;
+}
+
+.grid2 > div >p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.grid2 > div >p:nth-child(odd){
+    display: block;
+    background-color: #257;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.grid2 > div >p:nth-child(even){
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 22px;
+    padding-left: 3em;
+    padding-right: 3em;
+
+}
+
+.i1{
+    grid-area: i1;
+    border: solid 1px;
+}
+
+.i2{
+    grid-area: i2;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+
+.i4{
+    grid-area: i4;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.i3{
+    grid-area: i3;
+    border-style: solid;
+    border-width: thin;
+    border-left: ;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+    margin-bottom: 2em;
+}
+
+
+/*SY END ------------------------------------------*/

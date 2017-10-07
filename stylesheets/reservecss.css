@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 @import url(http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic);
 /* line 3, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 *, *:before, *:after {
@@ -161,7 +163,7 @@ header {
     box-shadow: 0 -2px 0 0 #2e8ece inset; }
   /* line 168, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .parallax {
-    
+
   }
   /* line 178, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
   header .site-logo {
@@ -583,15 +585,15 @@ footer {
     outline: 0;
     padding: 7px;
     width: 50%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
-    
+
 }
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
@@ -947,16 +949,21 @@ button {
     transition-duration: 0.4s;
 
 }
+
+/*SY START*/
+
 button:hover {
   background-color: #1abc9c;
   width: 550px;
   border: 0;
-  padding: 10px 0;
-  margin: 5px 0;
+  /*padding: 10px 0;
+  margin: 5px 0;*/
   text-align: center;
   color: #fff;
-
 }
+
+/*SY END*/
+
 .number1 {
     background: #1abc9c;
     color: #fff;
@@ -3392,7 +3399,7 @@ footer {
 /* IE6/7 support */
 .slicknav_menu { *zoom: 1 }
 
-/* 
+/*
     User Default Style
     Change the following styles to modify the appearance of the menu.
 */
@@ -3418,7 +3425,7 @@ footer {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;  
+    border-radius: 4px;
     background-color: #222222;
 }
 /* Button Text */
@@ -3470,5 +3477,225 @@ footer {
     background-color: #3DB4FF;
 }
 .slicknav_nav .slicknav_txtnode {
-     margin-left:15px;   
+     margin-left:15px;
 }
+
+/*======================================================================
+ SY START
+======================================================================*/
+
+.gridcon{
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.yourreservation{
+    margin-top: 3.5em;
+    margin-bottom: -3em;
+}
+
+.yourreservation > h1{
+    text-align: center;
+    color: #257;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "i12 i12 i12 i12 i12"
+    "i1 i2 i4 i5 i6"
+    "i7 i8 i9 i10 i11"
+    "i3 i3 i3 i3 i3"
+    ;
+}
+
+.grid > div{
+    display: grid;
+    text-align: center;
+    align-self: flex-start;
+    border-color: #000;
+}
+
+.grid > div >p{
+    margin: 0;
+    padding: 0;
+    font: normal arial, helvetica, sans-serif;
+}
+
+.grid > div >p:nth-child(odd){
+    display: block;
+    background-color: #257;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.grid > div >p:nth-child(even){
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 22px;
+    padding-left: 3em;
+    padding-right: 3em;
+
+}
+
+.i1{
+    grid-area: i1;
+    border: solid 1px;
+}
+
+.i2{
+    grid-area: i2;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+
+.i4{
+    grid-area: i4;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.i5{
+    grid-area: i5;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.i6{
+    grid-area: i6;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: ;
+    border-bottom: ;
+}
+
+.i7{
+    grid-area: i7;
+    border-style: solid;
+    border-width: thin;
+    border-left: ;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+}
+
+.i8{
+    grid-area: i8;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+}
+
+.i9{
+    grid-area: i9;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+}
+
+.i10{
+    grid-area: i10;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+}
+
+.i11{
+    grid-area: i11;
+    border-style: solid;
+    border-width: thin;
+    border-left: 0;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+}
+
+.i3{
+    grid-area: i3;
+    border-style: solid;
+    border-width: thin;
+    border-left: ;
+    border-right: ;
+    border-top: 0;
+    border-bottom: ;
+    margin-bottom: 2em;
+}
+
+.i12{
+    grid-area: i12;
+    border-style: solid;
+    border-width: thin;
+    border-left: ;
+    border-right: ;
+    border-top: ;
+    border-bottom: 0;
+    text-transform: uppercase;
+}
+
+.cancelres{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font: normal arial, helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.cancelres> button{
+    margin-bottom: 2.5em;
+}
+
+.cancelres > button:nth-child(odd){
+    margin-right: 1em;
+}
+.cancelres > button:nth-child(even){
+    margin-left: 1em;
+}
+
+footer span.fudge {
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+    font-family: "Open Sans";
+    font-size: 65px;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -5px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*======================================================================
+ SY END
+======================================================================*/

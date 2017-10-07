@@ -19,6 +19,8 @@ $pwd = mysqli_real_escape_string($conn, $_POST['pwd']) ;
 		header("Location: ../signup.php?signup=empty");
 		exit();
 	} else {
+
+		
 		//checks inputs are valid
 		if (!preg_match("/^[a-zA-z]*$/", $first) || !preg_match("/^[a-zA-z]*$/", $last)) {
 			
@@ -53,7 +55,7 @@ $pwd = mysqli_real_escape_string($conn, $_POST['pwd']) ;
 					";
 					mail($email, "Confirm Email, dude", $message, "From: Donotreply@gmail.com");
 					mysqli_query($conn, $sql);
-					header("Location: ../signup.php?signup=success");
+					header("Location: ../login.php?signup=success");
 					exit();
 				}
 			}
@@ -62,6 +64,6 @@ $pwd = mysqli_real_escape_string($conn, $_POST['pwd']) ;
 
 
 } else{
-	header("Location: ../signup.php");
+	header("Location: ../login.php");
 	exit();
 }

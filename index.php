@@ -270,6 +270,11 @@ $data = mysqli_query($conn, $sql);
               Copyright &copy; 2014-2017, Zaldy Ducusin Events and Consultancy
         </span>
       </footer>
+
+
+
+
+
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script>

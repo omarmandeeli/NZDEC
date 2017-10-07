@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic);
 /* line 3, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 *, *:before, *:after {
@@ -332,7 +333,7 @@ header {
 /* line 342, f:/SHIRO/Cloud/Work/shiro/source/stylesheets/style.css.sass */
 footer {
   position: relative;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 2em 0;
   height: 300px;
   background: #214a6d; }
@@ -975,8 +976,9 @@ button:hover {
   margin: 0px 0 5px 50px;
   text-align: center;
   color: #fff;
-
 }
+
+/*SY START*/
 
 .packagehead{
     padding: 2em;
@@ -993,77 +995,53 @@ button:hover {
 }
 
 .grid {
-    width: 80%;
-    margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    box-sizing: border-box;
 }
 
 
 .grid > div{
   min-width: 25%;
-  background-color: #f3f3f3;
-  margin: 1em;
-  border: 2px #39d solid;
+  margin: 1em 1em 2em 1em;
+  border: 1px #257 solid;
   padding: 1em;
   box-sizing: border-box;
 }
 
 .grid h1{
-    box-sizing: border-box;
     font-weight: bold;
-    padding: 1em 0 1em 0;
-    color: #000;
+    color: #fff;
     text-align: center;
+    background-color: #257;
+    padding: 2em 1em 1em 1em;
+    min-height: 5em;
+    max-height: 5em;
+    text-transform: uppercase;
+    margin: -1em -1em -1em -1em;
 }
 
 .grid img{
     display: block;
-  margin: auto;
-  min-width: 90%;
-  border: 2px #39d solid;
-      box-sizing: border-box;
-}
-
-.grid ul{
+    margin: 3em auto 1em auto;
+    min-width: 90%;
+    border: 1px #257 solid;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    margin-top: 2em;
-    text-align: left;
 }
 
-.grid li{
-    box-sizing: border-box;
-    font: normal 18px Arial, Helvetica, sans-serif;
-  margin: 0 auto;
-  margin-left: 18px;
-  padding: 0 auto;
-  padding-bottom: 18px;
-  color: #777;
-}
-
-.grid a{
-    margin-left: 1em;
+.grid> div> p{
     display: block;
-    padding: 5px 1px;
-    color: #fff;
-    background: #257;
+    text-align: left;
     font: normal 18px Arial, Helvetica, sans-serif;
-    text-align: center;
-    width: 35%;
-    border: none;
-    box-sizing: border-box;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    margin: 0 1em 1em 1em;
+    padding: 0 auto;
+    color: #222;
+    text-transform: full-width;
+
 }
-.grid a:hover
-{
-    background: #2ca;
-    -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-}
+
+
 
 .gridcontainer {
 }
@@ -1105,6 +1083,8 @@ cursor: pointer;
   justify-content: center;
   border-bottom: none;;
   }
+
+/*SY END*/
 
 .formstyle1{
     max-width: 80%;
@@ -1171,12 +1151,6 @@ cursor: pointer;
     color: #000;
 }
 
-<<<<<<< HEAD
-
-
-
-
-=======
 .formstyle1 select{
     -webkit-appearance: menulist-button;
     height:35px;
@@ -1240,3 +1214,34 @@ cursor: pointer;
 /*
 
 }*/
+
+.formstyle1 .note p {
+  position: absolute;
+  color: #e74c3c;
+  margin-right: 10px;
+  font-size: 10px;
+
+}
+
+
+.grid button{
+    display: block;
+    margin: auto;
+    vertical-align: bottom;
+    margin-bottom: 1em;
+}
+
+footer span.fudge {
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+    font-family: "Open Sans";
+    font-size: 65px;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    letter-spacing: -5px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
